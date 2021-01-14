@@ -1,0 +1,6 @@
+RemoteSystemsTempFiles/
+.metadata/
+*.zip
+*.rar
+*.tar.xz
+*.7z
