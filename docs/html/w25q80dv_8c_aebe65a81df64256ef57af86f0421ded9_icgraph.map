@@ -1,0 +1,9 @@
+<map id="W25Q80DV_WriteEnable" name="W25Q80DV_WriteEnable">
+<area shape="rect" id="node1" title="Enables write operation." alt="" coords="1065,5,1248,32"/>
+<area shape="rect" id="node2" href="$w25q80dv_8c.html#a96abb75834fbf756d9bb10402893e894" title="Writes a complete sector starting in init_pos (24 bits)" alt="" coords="839,5,1017,32"/>
+<area shape="rect" id="node3" href="$extflash__memory_8h.html#a7b15ba76cf7cf4bda2bf3c68a91febfd" title="Writes data to external FLASH memory." alt="" coords="628,5,791,32"/>
+<area shape="rect" id="node4" href="$freertos_8c.html#ad79ce8af311c18d3a05153a831c5e124" title="Function implementing the MagTask thread." alt="" coords="469,5,580,32"/>
+<area shape="rect" id="node5" href="$freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e" title="Function implementing the UARTTask thread." alt="" coords="303,5,421,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="108,5,255,32"/>
+<area shape="rect" id="node7" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>

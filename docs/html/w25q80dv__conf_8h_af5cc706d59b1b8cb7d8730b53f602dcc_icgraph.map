@@ -1,0 +1,9 @@
+<map id="W25Q80DV_TxRx_DMA" name="W25Q80DV_TxRx_DMA">
+<area shape="rect" id="node1" title="Transmit and then receives a number of bytes using DMA." alt="" coords="1108,5,1283,32"/>
+<area shape="rect" id="node2" href="$w25q80dv_8c.html#a544d5b09bfe51f0b5836a4bd825a9105" title="Reads status register. It is recommended to use the W25Q80DV_StatusRegTypeDef to read the value." alt="" coords="829,5,1060,32"/>
+<area shape="rect" id="node3" href="$w25q80dv_8c.html#a0f8c5b0db0652ec17aaea3cada9adf80" title="Reset FLASH memory." alt="" coords="641,5,781,32"/>
+<area shape="rect" id="node4" href="$w25q80dv_8c.html#ab3df1f457c09f9189e387541faec4ad9" title="Initializes the FLASH memory." alt="" coords="469,5,593,32"/>
+<area shape="rect" id="node5" href="$freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e" title="Function implementing the UARTTask thread." alt="" coords="303,5,421,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="108,5,255,32"/>
+<area shape="rect" id="node7" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>

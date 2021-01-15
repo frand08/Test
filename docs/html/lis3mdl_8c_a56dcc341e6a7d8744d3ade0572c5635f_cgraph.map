@@ -1,0 +1,10 @@
+<map id="LIS3MDL_ReadValues" name="LIS3MDL_ReadValues">
+<area shape="rect" id="node1" title="Read magnetometer data values." alt="" coords="5,157,168,184"/>
+<area shape="rect" id="node2" href="$lis3mdl__conf_8h.html#a78883cb66be3838bc995d3796c4fac8b" title="ON/OFF magnetometer chip select pin." alt="" coords="253,5,407,32"/>
+<area shape="rect" id="node3" href="$lis3mdl__conf_8h.html#a2e21d006e4bd6e05fda6b7e1a8a38706" title="Delay in milliseconds." alt="" coords="269,56,391,83"/>
+<area shape="rect" id="node4" href="$lis3mdl__conf_8h.html#a5af587f00d105228e22335b5e31980d4" title="Receives a number of bytes." alt="" coords="279,107,381,133"/>
+<area shape="rect" id="node5" href="$lis3mdl__conf_8h.html#a458de348e57ab034508fe7b77450b448" title="Receives a number of bytes using DMA." alt="" coords="260,157,400,184"/>
+<area shape="rect" id="node6" href="$lis3mdl__conf_8h.html#a64fd775e4b4529d0495ced5eef4dd9c2" title="Waits for last SPI receive operation to be completed." alt="" coords="216,208,444,235"/>
+<area shape="rect" id="node7" href="$lis3mdl__conf_8h.html#a00b00405c90bfdd942495bda7922a4a2" title="Transmits a number of bytes." alt="" coords="279,259,381,285"/>
+<area shape="rect" id="node8" href="$lis3mdl__conf_8h.html#a876971bbd831b74e35036918ff7c3164" title="Transmits a number of bytes using DMA." alt="" coords="261,309,399,336"/>
+</map>

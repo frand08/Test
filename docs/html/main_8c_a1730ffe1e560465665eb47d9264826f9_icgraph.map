@@ -1,0 +1,9 @@
+<map id="Error_Handler" name="Error_Handler">
+<area shape="rect" id="node1" title="This function is executed in case of error occurrence." alt="" coords="331,107,441,133"/>
+<area shape="rect" id="node2" href="$spi_8c.html#a8e1dadd744299fa6f8bca0e1bcbd2c00" title=" " alt="" coords="130,5,261,32"/>
+<area shape="rect" id="node3" href="$usart_8c.html#a62a25476866998c7aadfb5c0864fa349" title=" " alt="" coords="122,56,269,83"/>
+<area shape="rect" id="node4" href="$spi_8h.html#af81398f9775695df0b172367651ca3e6" title=" " alt="" coords="142,107,249,133"/>
+<area shape="rect" id="node6" href="$usart_8h.html#a57d1167735baafab8e3288526c424929" title=" " alt="" coords="108,157,283,184"/>
+<area shape="rect" id="node7" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="117,208,273,235"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,157,60,184"/>
+</map>

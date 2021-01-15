@@ -1,0 +1,273 @@
+\hypertarget{freertos_8c}{}\doxysection{stm32/\+Core/\+Src/freertos.c File Reference}
+\label{freertos_8c}\index{stm32/Core/Src/freertos.c@{stm32/Core/Src/freertos.c}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{freertos_8c_ad79ce8af311c18d3a05153a831c5e124}{Start\+Mag\+Task}} (void const $\ast$argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the Mag\+Task thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{freertos_8c_a6fe609e7033e6786a78a4a23a062b31e}{Start\+U\+A\+R\+T\+Task}} (void const $\ast$argument)
+\begin{DoxyCompactList}\small\item\em Function implementing the U\+A\+R\+T\+Task thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{freertos_8c_abade755e13d07c10889ae83143656158}{M\+X\+\_\+\+F\+R\+E\+E\+R\+T\+O\+S\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Free\+R\+T\+OS initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{freertos_8c_a1988aa923b19fa6f31c93afa7773f793}{v\+Application\+Get\+Idle\+Task\+Memory}} (Static\+Task\+\_\+t $\ast$$\ast$ppx\+Idle\+Task\+T\+C\+B\+Buffer, Stack\+Type\+\_\+t $\ast$$\ast$ppx\+Idle\+Task\+Stack\+Buffer, uint32\+\_\+t $\ast$pul\+Idle\+Task\+Stack\+Size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+U\+A\+R\+T\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{freertos_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+D\+M\+A\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{freertos_8c_a34251392f0d5e2461e3aef615918c235}{hdma\+\_\+usart1\+\_\+rx}}
+\item 
+os\+Thread\+Id \mbox{\hyperlink{freertos_8c_a562733ff4682a7c5e8983e0f1e6b7678}{Mag\+Task\+Handle}}
+\item 
+os\+Thread\+Id \mbox{\hyperlink{freertos_8c_a91e944cab9d011f1e817ae207fe08f47}{U\+A\+R\+T\+Task\+Handle}}
+\item 
+os\+Message\+Q\+Id \mbox{\hyperlink{freertos_8c_a780d3f65f4c313624026d555df7f289a}{U\+A\+R\+T\+Queue\+Handle}}
+\item 
+os\+Message\+Q\+Id \mbox{\hyperlink{freertos_8c_a8c37aca57d037596b651eb312178a9d9}{S\+P\+I\+Tx\+Queue\+Handle}}
+\item 
+os\+Message\+Q\+Id \mbox{\hyperlink{freertos_8c_a5ee0f2482bbc2a2b4776be1815a21340}{S\+P\+I\+Rx\+Queue\+Handle}}
+\item 
+os\+Semaphore\+Id \mbox{\hyperlink{freertos_8c_aa0c584b11befda1e42659824e86cd337}{S\+P\+I\+Semaphore\+Handle}}
+\item 
+static Static\+Task\+\_\+t \mbox{\hyperlink{freertos_8c_a2dd1013c5ef8f355ac2f1479e36ec659}{x\+Idle\+Task\+T\+C\+B\+Buffer}}
+\item 
+static Stack\+Type\+\_\+t \mbox{\hyperlink{freertos_8c_af311b04396149ce536fe1a3b5f127445}{x\+Idle\+Stack}} \mbox{[}config\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{freertos_8c_abade755e13d07c10889ae83143656158}\label{freertos_8c_abade755e13d07c10889ae83143656158}} 
+\index{freertos.c@{freertos.c}!MX\_FREERTOS\_Init@{MX\_FREERTOS\_Init}}
+\index{MX\_FREERTOS\_Init@{MX\_FREERTOS\_Init}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{MX\_FREERTOS\_Init()}{MX\_FREERTOS\_Init()}}
+{\footnotesize\ttfamily void M\+X\+\_\+\+F\+R\+E\+E\+R\+T\+O\+S\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Free\+R\+T\+OS initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 100 of file freertos.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{freertos_8c_abade755e13d07c10889ae83143656158_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{freertos_8c_abade755e13d07c10889ae83143656158_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{freertos_8c_ad79ce8af311c18d3a05153a831c5e124}\label{freertos_8c_ad79ce8af311c18d3a05153a831c5e124}} 
+\index{freertos.c@{freertos.c}!StartMagTask@{StartMagTask}}
+\index{StartMagTask@{StartMagTask}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{StartMagTask()}{StartMagTask()}}
+{\footnotesize\ttfamily void Start\+Mag\+Task (\begin{DoxyParamCaption}\item[{void const $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the Mag\+Task thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 255 of file freertos.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{freertos_8c_ad79ce8af311c18d3a05153a831c5e124_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{freertos_8c_ad79ce8af311c18d3a05153a831c5e124_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{freertos_8c_a6fe609e7033e6786a78a4a23a062b31e}\label{freertos_8c_a6fe609e7033e6786a78a4a23a062b31e}} 
+\index{freertos.c@{freertos.c}!StartUARTTask@{StartUARTTask}}
+\index{StartUARTTask@{StartUARTTask}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{StartUARTTask()}{StartUARTTask()}}
+{\footnotesize\ttfamily void Start\+U\+A\+R\+T\+Task (\begin{DoxyParamCaption}\item[{void const $\ast$}]{argument }\end{DoxyParamCaption})}
+
+
+
+Function implementing the U\+A\+R\+T\+Task thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & Not used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 157 of file freertos.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{freertos_8c_a6fe609e7033e6786a78a4a23a062b31e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{freertos_8c_a6fe609e7033e6786a78a4a23a062b31e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{freertos_8c_a1988aa923b19fa6f31c93afa7773f793}\label{freertos_8c_a1988aa923b19fa6f31c93afa7773f793}} 
+\index{freertos.c@{freertos.c}!vApplicationGetIdleTaskMemory@{vApplicationGetIdleTaskMemory}}
+\index{vApplicationGetIdleTaskMemory@{vApplicationGetIdleTaskMemory}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{vApplicationGetIdleTaskMemory()}{vApplicationGetIdleTaskMemory()}}
+{\footnotesize\ttfamily void v\+Application\+Get\+Idle\+Task\+Memory (\begin{DoxyParamCaption}\item[{Static\+Task\+\_\+t $\ast$$\ast$}]{ppx\+Idle\+Task\+T\+C\+B\+Buffer,  }\item[{Stack\+Type\+\_\+t $\ast$$\ast$}]{ppx\+Idle\+Task\+Stack\+Buffer,  }\item[{uint32\+\_\+t $\ast$}]{pul\+Idle\+Task\+Stack\+Size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 86 of file freertos.\+c.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{freertos_8c_a34251392f0d5e2461e3aef615918c235}\label{freertos_8c_a34251392f0d5e2461e3aef615918c235}} 
+\index{freertos.c@{freertos.c}!hdma\_usart1\_rx@{hdma\_usart1\_rx}}
+\index{hdma\_usart1\_rx@{hdma\_usart1\_rx}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart1\_rx}{hdma\_usart1\_rx}}
+{\footnotesize\ttfamily D\+M\+A\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart1\+\_\+rx}
+
+
+
+Definition at line 28 of file usart.\+c.
+
+\mbox{\Hypertarget{freertos_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{freertos_8c_a2cf715bef37f7e8ef385a30974a5f0d5}} 
+\index{freertos.c@{freertos.c}!huart1@{huart1}}
+\index{huart1@{huart1}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+\+Handle\+Type\+Def huart1}
+
+File Name \+: \mbox{\hyperlink{freertos_8c}{freertos.\+c}} Description \+: Code for freertos applications
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under Ultimate Liberty license S\+L\+A0044, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: www.\+st.\+com/\+S\+L\+A0044 
+
+Definition at line 27 of file usart.\+c.
+
+\mbox{\Hypertarget{freertos_8c_a562733ff4682a7c5e8983e0f1e6b7678}\label{freertos_8c_a562733ff4682a7c5e8983e0f1e6b7678}} 
+\index{freertos.c@{freertos.c}!MagTaskHandle@{MagTaskHandle}}
+\index{MagTaskHandle@{MagTaskHandle}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{MagTaskHandle}{MagTaskHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id Mag\+Task\+Handle}
+
+
+
+Definition at line 59 of file freertos.\+c.
+
+\mbox{\Hypertarget{freertos_8c_a5ee0f2482bbc2a2b4776be1815a21340}\label{freertos_8c_a5ee0f2482bbc2a2b4776be1815a21340}} 
+\index{freertos.c@{freertos.c}!SPIRxQueueHandle@{SPIRxQueueHandle}}
+\index{SPIRxQueueHandle@{SPIRxQueueHandle}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{SPIRxQueueHandle}{SPIRxQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Q\+Id S\+P\+I\+Rx\+Queue\+Handle}
+
+
+
+Definition at line 65 of file freertos.\+c.
+
+\mbox{\Hypertarget{freertos_8c_aa0c584b11befda1e42659824e86cd337}\label{freertos_8c_aa0c584b11befda1e42659824e86cd337}} 
+\index{freertos.c@{freertos.c}!SPISemaphoreHandle@{SPISemaphoreHandle}}
+\index{SPISemaphoreHandle@{SPISemaphoreHandle}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{SPISemaphoreHandle}{SPISemaphoreHandle}}
+{\footnotesize\ttfamily os\+Semaphore\+Id S\+P\+I\+Semaphore\+Handle}
+
+
+
+Definition at line 66 of file freertos.\+c.
+
+\mbox{\Hypertarget{freertos_8c_a8c37aca57d037596b651eb312178a9d9}\label{freertos_8c_a8c37aca57d037596b651eb312178a9d9}} 
+\index{freertos.c@{freertos.c}!SPITxQueueHandle@{SPITxQueueHandle}}
+\index{SPITxQueueHandle@{SPITxQueueHandle}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{SPITxQueueHandle}{SPITxQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Q\+Id S\+P\+I\+Tx\+Queue\+Handle}
+
+
+
+Definition at line 64 of file freertos.\+c.
+
+\mbox{\Hypertarget{freertos_8c_a780d3f65f4c313624026d555df7f289a}\label{freertos_8c_a780d3f65f4c313624026d555df7f289a}} 
+\index{freertos.c@{freertos.c}!UARTQueueHandle@{UARTQueueHandle}}
+\index{UARTQueueHandle@{UARTQueueHandle}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{UARTQueueHandle}{UARTQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Q\+Id U\+A\+R\+T\+Queue\+Handle}
+
+
+
+Definition at line 63 of file freertos.\+c.
+
+\mbox{\Hypertarget{freertos_8c_a91e944cab9d011f1e817ae207fe08f47}\label{freertos_8c_a91e944cab9d011f1e817ae207fe08f47}} 
+\index{freertos.c@{freertos.c}!UARTTaskHandle@{UARTTaskHandle}}
+\index{UARTTaskHandle@{UARTTaskHandle}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{UARTTaskHandle}{UARTTaskHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id U\+A\+R\+T\+Task\+Handle}
+
+
+
+Definition at line 62 of file freertos.\+c.
+
+\mbox{\Hypertarget{freertos_8c_af311b04396149ce536fe1a3b5f127445}\label{freertos_8c_af311b04396149ce536fe1a3b5f127445}} 
+\index{freertos.c@{freertos.c}!xIdleStack@{xIdleStack}}
+\index{xIdleStack@{xIdleStack}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{xIdleStack}{xIdleStack}}
+{\footnotesize\ttfamily Stack\+Type\+\_\+t x\+Idle\+Stack\mbox{[}config\+M\+I\+N\+I\+M\+A\+L\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 84 of file freertos.\+c.
+
+\mbox{\Hypertarget{freertos_8c_a2dd1013c5ef8f355ac2f1479e36ec659}\label{freertos_8c_a2dd1013c5ef8f355ac2f1479e36ec659}} 
+\index{freertos.c@{freertos.c}!xIdleTaskTCBBuffer@{xIdleTaskTCBBuffer}}
+\index{xIdleTaskTCBBuffer@{xIdleTaskTCBBuffer}!freertos.c@{freertos.c}}
+\doxysubsubsection{\texorpdfstring{xIdleTaskTCBBuffer}{xIdleTaskTCBBuffer}}
+{\footnotesize\ttfamily Static\+Task\+\_\+t x\+Idle\+Task\+T\+C\+B\+Buffer\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 83 of file freertos.\+c.
+

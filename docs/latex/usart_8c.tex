@@ -1,0 +1,117 @@
+\hypertarget{usart_8c}{}\doxysection{stm32/\+Core/\+Src/usart.c File Reference}
+\label{usart_8c}\index{stm32/Core/Src/usart.c@{stm32/Core/Src/usart.c}}
+
+
+This file provides code for the configuration of the U\+S\+A\+RT instances.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{usart_8c_a57d1167735baafab8e3288526c424929}{M\+X\+\_\+\+U\+S\+A\+R\+T1\+\_\+\+U\+A\+R\+T\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{usart_8c_a62a25476866998c7aadfb5c0864fa349}{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init}} (U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$uart\+Handle)
+\item 
+void \mbox{\hyperlink{usart_8c_a94cd2c58add4f2549895a03bf267622e}{H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+De\+Init}} (U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$uart\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+U\+A\+R\+T\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{usart_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+D\+M\+A\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{usart_8c_a34251392f0d5e2461e3aef615918c235}{hdma\+\_\+usart1\+\_\+rx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the U\+S\+A\+RT instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under Ultimate Liberty license S\+L\+A0044, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: www.\+st.\+com/\+S\+L\+A0044 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{usart_8c_a94cd2c58add4f2549895a03bf267622e}\label{usart_8c_a94cd2c58add4f2549895a03bf267622e}} 
+\index{usart.c@{usart.c}!HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}}
+\index{HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_MspDeInit()}{HAL\_UART\_MspDeInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$}]{uart\+Handle }\end{DoxyParamCaption})}
+
+U\+S\+A\+R\+T1 G\+P\+IO Configuration P\+A9 -\/-\/-\/---$>$ U\+S\+A\+R\+T1\+\_\+\+TX P\+A10 -\/-\/-\/---$>$ U\+S\+A\+R\+T1\+\_\+\+RX
+
+Definition at line 103 of file usart.\+c.
+
+\mbox{\Hypertarget{usart_8c_a62a25476866998c7aadfb5c0864fa349}\label{usart_8c_a62a25476866998c7aadfb5c0864fa349}} 
+\index{usart.c@{usart.c}!HAL\_UART\_MspInit@{HAL\_UART\_MspInit}}
+\index{HAL\_UART\_MspInit@{HAL\_UART\_MspInit}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_MspInit()}{HAL\_UART\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+U\+A\+R\+T\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def $\ast$}]{uart\+Handle }\end{DoxyParamCaption})}
+
+U\+S\+A\+R\+T1 G\+P\+IO Configuration P\+A9 -\/-\/-\/---$>$ U\+S\+A\+R\+T1\+\_\+\+TX P\+A10 -\/-\/-\/---$>$ U\+S\+A\+R\+T1\+\_\+\+RX
+
+Definition at line 50 of file usart.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{usart_8c_a62a25476866998c7aadfb5c0864fa349_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{usart_8c_a57d1167735baafab8e3288526c424929}\label{usart_8c_a57d1167735baafab8e3288526c424929}} 
+\index{usart.c@{usart.c}!MX\_USART1\_UART\_Init@{MX\_USART1\_UART\_Init}}
+\index{MX\_USART1\_UART\_Init@{MX\_USART1\_UART\_Init}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{MX\_USART1\_UART\_Init()}{MX\_USART1\_UART\_Init()}}
+{\footnotesize\ttfamily void M\+X\+\_\+\+U\+S\+A\+R\+T1\+\_\+\+U\+A\+R\+T\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file usart.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{usart_8c_a57d1167735baafab8e3288526c424929_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{usart_8c_a57d1167735baafab8e3288526c424929_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{usart_8c_a34251392f0d5e2461e3aef615918c235}\label{usart_8c_a34251392f0d5e2461e3aef615918c235}} 
+\index{usart.c@{usart.c}!hdma\_usart1\_rx@{hdma\_usart1\_rx}}
+\index{hdma\_usart1\_rx@{hdma\_usart1\_rx}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart1\_rx}{hdma\_usart1\_rx}}
+{\footnotesize\ttfamily D\+M\+A\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart1\+\_\+rx}
+
+
+
+Definition at line 28 of file usart.\+c.
+
+\mbox{\Hypertarget{usart_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{usart_8c_a2cf715bef37f7e8ef385a30974a5f0d5}} 
+\index{usart.c@{usart.c}!huart1@{huart1}}
+\index{huart1@{huart1}!usart.c@{usart.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+\+Handle\+Type\+Def huart1}
+
+File Name \+: \mbox{\hyperlink{freertos_8c}{freertos.\+c}} Description \+: Code for freertos applications
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under Ultimate Liberty license S\+L\+A0044, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: www.\+st.\+com/\+S\+L\+A0044 
+
+Definition at line 27 of file usart.\+c.
+

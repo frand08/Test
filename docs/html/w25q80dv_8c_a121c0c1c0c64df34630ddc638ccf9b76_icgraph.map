@@ -1,0 +1,8 @@
+<map id="W25Q80DV_ReadBytes" name="W25Q80DV_ReadBytes">
+<area shape="rect" id="node1" title="Read some bytes based on initial position." alt="" coords="679,31,852,57"/>
+<area shape="rect" id="node2" href="$extflash__memory_8h.html#ab480ef650cb206b243928597a50754e2" title="Checks the ID is present on FLASH memory." alt="" coords="475,5,625,32"/>
+<area shape="rect" id="node6" href="$extflash__memory_8h.html#a738991c510a5ee657d01d0c2a82d3599" title="Reads data from external FLASH memory." alt="" coords="469,56,631,83"/>
+<area shape="rect" id="node3" href="$freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e" title="Function implementing the UARTTask thread." alt="" coords="303,31,421,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="108,31,255,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,60,57"/>
+</map>

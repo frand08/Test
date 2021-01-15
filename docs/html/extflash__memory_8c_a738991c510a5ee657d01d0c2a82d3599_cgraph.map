@@ -1,0 +1,13 @@
+<map id="EXTFLASH_ReadData" name="EXTFLASH_ReadData">
+<area shape="rect" id="node1" title="Reads data from external FLASH memory." alt="" coords="5,183,167,209"/>
+<area shape="rect" id="node2" href="$w25q80dv_8h.html#a121c0c1c0c64df34630ddc638ccf9b76" title="Read some bytes based on initial position." alt="" coords="215,183,388,209"/>
+<area shape="rect" id="node3" href="$lis3mdl__conf_8c.html#ad3ea125cdd6250300d1c332652e139de" title="ON/OFF magnetometer chip select pin." alt="" coords="767,5,939,32"/>
+<area shape="rect" id="node4" href="$lis3mdl__conf_8c.html#a1de4e79d0a9e295a52e76450b519f39f" title="Delay in milliseconds." alt="" coords="783,56,924,83"/>
+<area shape="rect" id="node5" href="$lis3mdl__conf_8c.html#a205be3fab0ea8da0d83a78c815559a6e" title="Receives a number of bytes." alt="" coords="499,259,619,285"/>
+<area shape="rect" id="node6" href="$lis3mdl__conf_8c.html#a6c2d71a422266a8c2dbc93b0cefc6805" title="Receives a number of bytes using DMA." alt="" coords="480,309,639,336"/>
+<area shape="rect" id="node7" href="$lis3mdl__conf_8c.html#a83d14ac29c1ddd3f0aef622282f7a32a" title="Waits for last SPI receive operation to be completed." alt="" coords="436,360,683,387"/>
+<area shape="rect" id="node8" href="$lis3mdl__conf_8c.html#a7775015cb4c759eabbbddfe8f903acc9" title="Transmits a number of bytes." alt="" coords="794,157,913,184"/>
+<area shape="rect" id="node9" href="$lis3mdl__conf_8c.html#a2e17264c13c944d054066b6a8a7b26ca" title="Transmits a number of bytes using DMA." alt="" coords="775,208,932,235"/>
+<area shape="rect" id="node10" href="$w25q80dv_8c.html#a070fb2732e86a991500214598dd9eec2" title="Disables write operation." alt="" coords="466,107,653,133"/>
+<area shape="rect" id="node11" href="$lis3mdl__conf_8c.html#af02b29325dc32e5e998b2fb8a1be3d01" title="Waits for last SPI transmit operation to be completed." alt="" coords="731,107,976,133"/>
+</map>

@@ -1,0 +1,122 @@
+\hypertarget{spi_8c}{}\doxysection{stm32/\+Core/\+Src/spi.c File Reference}
+\label{spi_8c}\index{stm32/Core/Src/spi.c@{stm32/Core/Src/spi.c}}
+
+
+This file provides code for the configuration of the S\+PI instances.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{spi_8c_af81398f9775695df0b172367651ca3e6}{M\+X\+\_\+\+S\+P\+I1\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{spi_8c_a8e1dadd744299fa6f8bca0e1bcbd2c00}{H\+A\+L\+\_\+\+S\+P\+I\+\_\+\+Msp\+Init}} (S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$spi\+Handle)
+\item 
+void \mbox{\hyperlink{spi_8c_af9af6cae4cb9386b709196d3a3ab4f78}{H\+A\+L\+\_\+\+S\+P\+I\+\_\+\+Msp\+De\+Init}} (S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$spi\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\+P\+I\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{spi_8c_a9c6222bae4d0328dd843ae099623b40b}{hspi1}}
+\item 
+D\+M\+A\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{spi_8c_ad70fe79aa3139fc9184d8ffb5dfba323}{hdma\+\_\+spi1\+\_\+rx}}
+\item 
+D\+M\+A\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{spi_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}{hdma\+\_\+spi1\+\_\+tx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the S\+PI instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under Ultimate Liberty license S\+L\+A0044, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: www.\+st.\+com/\+S\+L\+A0044 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{spi_8c_af9af6cae4cb9386b709196d3a3ab4f78}\label{spi_8c_af9af6cae4cb9386b709196d3a3ab4f78}} 
+\index{spi.c@{spi.c}!HAL\_SPI\_MspDeInit@{HAL\_SPI\_MspDeInit}}
+\index{HAL\_SPI\_MspDeInit@{HAL\_SPI\_MspDeInit}!spi.c@{spi.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_SPI\_MspDeInit()}{HAL\_SPI\_MspDeInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+S\+P\+I\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{spi\+Handle }\end{DoxyParamCaption})}
+
+S\+P\+I1 G\+P\+IO Configuration P\+A5 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+S\+CK P\+A6 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+M\+I\+SO P\+A7 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+M\+O\+SI
+
+Definition at line 121 of file spi.\+c.
+
+\mbox{\Hypertarget{spi_8c_a8e1dadd744299fa6f8bca0e1bcbd2c00}\label{spi_8c_a8e1dadd744299fa6f8bca0e1bcbd2c00}} 
+\index{spi.c@{spi.c}!HAL\_SPI\_MspInit@{HAL\_SPI\_MspInit}}
+\index{HAL\_SPI\_MspInit@{HAL\_SPI\_MspInit}!spi.c@{spi.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_SPI\_MspInit()}{HAL\_SPI\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+S\+P\+I\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle\+Type\+Def $\ast$}]{spi\+Handle }\end{DoxyParamCaption})}
+
+S\+P\+I1 G\+P\+IO Configuration P\+A5 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+S\+CK P\+A6 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+M\+I\+SO P\+A7 -\/-\/-\/---$>$ S\+P\+I1\+\_\+\+M\+O\+SI
+
+Definition at line 54 of file spi.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{spi_8c_a8e1dadd744299fa6f8bca0e1bcbd2c00_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{spi_8c_af81398f9775695df0b172367651ca3e6}\label{spi_8c_af81398f9775695df0b172367651ca3e6}} 
+\index{spi.c@{spi.c}!MX\_SPI1\_Init@{MX\_SPI1\_Init}}
+\index{MX\_SPI1\_Init@{MX\_SPI1\_Init}!spi.c@{spi.c}}
+\doxysubsubsection{\texorpdfstring{MX\_SPI1\_Init()}{MX\_SPI1\_Init()}}
+{\footnotesize\ttfamily void M\+X\+\_\+\+S\+P\+I1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file spi.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{spi_8c_af81398f9775695df0b172367651ca3e6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{spi_8c_af81398f9775695df0b172367651ca3e6_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{spi_8c_ad70fe79aa3139fc9184d8ffb5dfba323}\label{spi_8c_ad70fe79aa3139fc9184d8ffb5dfba323}} 
+\index{spi.c@{spi.c}!hdma\_spi1\_rx@{hdma\_spi1\_rx}}
+\index{hdma\_spi1\_rx@{hdma\_spi1\_rx}!spi.c@{spi.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_spi1\_rx}{hdma\_spi1\_rx}}
+{\footnotesize\ttfamily D\+M\+A\+\_\+\+Handle\+Type\+Def hdma\+\_\+spi1\+\_\+rx}
+
+
+
+Definition at line 28 of file spi.\+c.
+
+\mbox{\Hypertarget{spi_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}\label{spi_8c_ac8cdcfbb7adfcccc5717da58e1e10ae4}} 
+\index{spi.c@{spi.c}!hdma\_spi1\_tx@{hdma\_spi1\_tx}}
+\index{hdma\_spi1\_tx@{hdma\_spi1\_tx}!spi.c@{spi.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_spi1\_tx}{hdma\_spi1\_tx}}
+{\footnotesize\ttfamily D\+M\+A\+\_\+\+Handle\+Type\+Def hdma\+\_\+spi1\+\_\+tx}
+
+
+
+Definition at line 29 of file spi.\+c.
+
+\mbox{\Hypertarget{spi_8c_a9c6222bae4d0328dd843ae099623b40b}\label{spi_8c_a9c6222bae4d0328dd843ae099623b40b}} 
+\index{spi.c@{spi.c}!hspi1@{hspi1}}
+\index{hspi1@{hspi1}!spi.c@{spi.c}}
+\doxysubsubsection{\texorpdfstring{hspi1}{hspi1}}
+{\footnotesize\ttfamily S\+P\+I\+\_\+\+Handle\+Type\+Def hspi1}
+
+
+
+Definition at line 27 of file spi.\+c.
+

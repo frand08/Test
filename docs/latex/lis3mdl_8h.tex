@@ -1,0 +1,140 @@
+\hypertarget{lis3mdl_8h}{}\doxysection{stm32/\+Drivers/\+L\+I\+S3\+M\+D\+L/\+Inc/lis3mdl.h File Reference}
+\label{lis3mdl_8h}\index{stm32/Drivers/LIS3MDL/Inc/lis3mdl.h@{stm32/Drivers/LIS3MDL/Inc/lis3mdl.h}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structLIS3MDL__DataTypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Data\+Type\+Def}}
+\item 
+union \mbox{\hyperlink{unionLIS3MDL__CtrlReg1TypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Ctrl\+Reg1\+Type\+Def}}
+\item 
+union \mbox{\hyperlink{unionLIS3MDL__CtrlReg2TypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Ctrl\+Reg2\+Type\+Def}}
+\item 
+union \mbox{\hyperlink{unionLIS3MDL__CtrlReg3TypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Ctrl\+Reg3\+Type\+Def}}
+\item 
+union \mbox{\hyperlink{unionLIS3MDL__CtrlReg4TypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Ctrl\+Reg4\+Type\+Def}}
+\item 
+union \mbox{\hyperlink{unionLIS3MDL__CtrlReg5TypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Ctrl\+Reg5\+Type\+Def}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} \{ \mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12a3632301163265edd675f03df77ac8779}{L\+I\+S3\+M\+D\+L\+\_\+\+E\+R\+R\+OR}} = -\/1, 
+\mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12a3eb6a54fdbf7de6a1001aa20fca091d3}{L\+I\+S3\+M\+D\+L\+\_\+\+OK}} = 0
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl_8h_aec572a4b9b29ecc7c210e3c04e9bb851}{L\+I\+S3\+M\+D\+L\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the magnetometer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl_8h_a56dcc341e6a7d8744d3ade0572c5635f}{L\+I\+S3\+M\+D\+L\+\_\+\+Read\+Values}} (\mbox{\hyperlink{structLIS3MDL__DataTypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Data\+Type\+Def}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Read magnetometer data values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+fdominguez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/13/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}\label{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}} 
+\index{lis3mdl.h@{lis3mdl.h}!LIS3MDL\_StatusTypeDef@{LIS3MDL\_StatusTypeDef}}
+\index{LIS3MDL\_StatusTypeDef@{LIS3MDL\_StatusTypeDef}!lis3mdl.h@{lis3mdl.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_StatusTypeDef}{LIS3MDL\_StatusTypeDef}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIS3MDL\_ERROR@{LIS3MDL\_ERROR}!lis3mdl.h@{lis3mdl.h}}\index{lis3mdl.h@{lis3mdl.h}!LIS3MDL\_ERROR@{LIS3MDL\_ERROR}}}\mbox{\Hypertarget{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12a3632301163265edd675f03df77ac8779}\label{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12a3632301163265edd675f03df77ac8779}} 
+L\+I\+S3\+M\+D\+L\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIS3MDL\_OK@{LIS3MDL\_OK}!lis3mdl.h@{lis3mdl.h}}\index{lis3mdl.h@{lis3mdl.h}!LIS3MDL\_OK@{LIS3MDL\_OK}}}\mbox{\Hypertarget{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12a3eb6a54fdbf7de6a1001aa20fca091d3}\label{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12a3eb6a54fdbf7de6a1001aa20fca091d3}} 
+L\+I\+S3\+M\+D\+L\+\_\+\+OK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file lis3mdl.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lis3mdl_8h_aec572a4b9b29ecc7c210e3c04e9bb851}\label{lis3mdl_8h_aec572a4b9b29ecc7c210e3c04e9bb851}} 
+\index{lis3mdl.h@{lis3mdl.h}!LIS3MDL\_Init@{LIS3MDL\_Init}}
+\index{LIS3MDL\_Init@{LIS3MDL\_Init}!lis3mdl.h@{lis3mdl.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_Init()}{LIS3MDL\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} L\+I\+S3\+M\+D\+L\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the magnetometer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+I\+S3\+M\+DL} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 36 of file lis3mdl.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8h_aec572a4b9b29ecc7c210e3c04e9bb851_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8h_aec572a4b9b29ecc7c210e3c04e9bb851_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl_8h_a56dcc341e6a7d8744d3ade0572c5635f}\label{lis3mdl_8h_a56dcc341e6a7d8744d3ade0572c5635f}} 
+\index{lis3mdl.h@{lis3mdl.h}!LIS3MDL\_ReadValues@{LIS3MDL\_ReadValues}}
+\index{LIS3MDL\_ReadValues@{LIS3MDL\_ReadValues}!lis3mdl.h@{lis3mdl.h}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_ReadValues()}{LIS3MDL\_ReadValues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} L\+I\+S3\+M\+D\+L\+\_\+\+Read\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLIS3MDL__DataTypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Data\+Type\+Def}} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Read magnetometer data values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & L\+I\+S3\+M\+DL Data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+I\+S3\+M\+DL} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 206 of file lis3mdl.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8h_a56dcc341e6a7d8744d3ade0572c5635f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8h_a56dcc341e6a7d8744d3ade0572c5635f_icgraph}
+\end{center}
+\end{figure}

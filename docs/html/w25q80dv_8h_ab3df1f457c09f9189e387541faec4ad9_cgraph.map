@@ -1,0 +1,15 @@
+<map id="W25Q80DV_Init" name="W25Q80DV_Init">
+<area shape="rect" id="node1" title="Initializes the FLASH memory." alt="" coords="5,318,129,345"/>
+<area shape="rect" id="node2" href="$lis3mdl__conf_8c.html#ad3ea125cdd6250300d1c332652e139de" title="ON/OFF magnetometer chip select pin." alt="" coords="715,14,887,41"/>
+<area shape="rect" id="node3" href="$lis3mdl__conf_8c.html#a1de4e79d0a9e295a52e76450b519f39f" title="Delay in milliseconds." alt="" coords="730,166,871,193"/>
+<area shape="rect" id="node4" href="$w25q80dv_8c.html#a0f8c5b0db0652ec17aaea3cada9adf80" title="Reset FLASH memory." alt="" coords="187,191,327,218"/>
+<area shape="rect" id="node6" href="$lis3mdl__conf_8c.html#a83d14ac29c1ddd3f0aef622282f7a32a" title="Waits for last SPI receive operation to be completed." alt="" coords="677,293,924,319"/>
+<area shape="rect" id="node9" href="$lis3mdl__conf_8c.html#a7775015cb4c759eabbbddfe8f903acc9" title="Transmits a number of bytes." alt="" coords="447,242,566,269"/>
+<area shape="rect" id="node10" href="$lis3mdl__conf_8c.html#a2e17264c13c944d054066b6a8a7b26ca" title="Transmits a number of bytes using DMA." alt="" coords="428,293,585,319"/>
+<area shape="rect" id="node12" href="$lis3mdl__conf_8c.html#a205be3fab0ea8da0d83a78c815559a6e" title="Receives a number of bytes." alt="" coords="197,445,317,471"/>
+<area shape="rect" id="node13" href="$lis3mdl__conf_8c.html#a6c2d71a422266a8c2dbc93b0cefc6805" title="Receives a number of bytes using DMA." alt="" coords="177,495,336,522"/>
+<area shape="rect" id="node5" href="$w25q80dv_8c.html#a544d5b09bfe51f0b5836a4bd825a9105" title="Reads status register. It is recommended to use the W25Q80DV_StatusRegTypeDef to read the value." alt="" coords="391,90,622,117"/>
+<area shape="rect" id="node11" href="$lis3mdl__conf_8c.html#af02b29325dc32e5e998b2fb8a1be3d01" title="Waits for last SPI transmit operation to be completed." alt="" coords="384,191,629,218"/>
+<area shape="rect" id="node7" href="$lis3mdl__conf_8c.html#ae600f0fbfbfc47987b798a3c9bd4f948" title="Transmit and then receives a number of bytes." alt="" coords="733,65,869,91"/>
+<area shape="rect" id="node8" href="$lis3mdl__conf_8c.html#a332c053967b6e0f67a33fe39e91fce2b" title="Transmit and then receives a number of bytes using DMA." alt="" coords="713,115,888,142"/>
+</map>
