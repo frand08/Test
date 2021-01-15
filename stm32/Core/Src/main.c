@@ -100,26 +100,6 @@ int main(void)
    * but in their respective threads. Check what is needed
    */
 
-  /* If memory init could not be done,
-   * inform via UART and do something (reset maybe).
-   */
-  if(W25Q80DV_Init() != W25Q80DV_OK)
-  {
-  	SERIAL_SEND("FLASH init error.\r\n");
-  	/* TODO: Reset MCU or something... */
-  	return -1;
-  }
-
-  /* If magnetometer init could not be done,
-   * inform via UART and do something (reset maybe).
-   */
-  if(LIS3MDL_Init() != LIS3MDL_OK)
-  {
-	SERIAL_SEND("Magnetometer init error.\r\n");
-	/* TODO: Reset MCU or something... */
-	return -1;
-  }
-
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

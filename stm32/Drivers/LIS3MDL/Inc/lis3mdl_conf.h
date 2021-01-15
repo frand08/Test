@@ -1,28 +1,32 @@
-/*
- * lis3mdl_conf.h
- *
- *  Created on: Jan 13, 2021
- *      Author: fdominguez
- */
+/**
+  ******************************************************************************
+  * @file lis3mdl_conf.h
+  * @author fdominguez
+  * @date 01/13/2020
+  * @version 1.0.0
+  ******************************************************************************
+  */
 
 #ifndef LIS3MDL_CONF_H_
 #define LIS3MDL_CONF_H_
 
-#include "cmsis_os.h"
-#include "stm32f1xx_hal.h"
+#include "lis3mdl.h"
 #include "main.h"
 
-extern SPI_HandleTypeDef hspi1;
-
-#define LIS3MDL_SPI									hspi1
+/* Enable/Disable this option if you want to use SPI via DMA */
+#define LIS3MDL_USE_DMA
 
 #define LIS3MDL_CS_ON									GPIO_PIN_RESET
 #define LIS3MDL_CS_OFF									GPIO_PIN_SET
-#define LIS3MDL_SPI_CS(on_off)							HAL_GPIO_WritePin(CS_MAG_GPIO_Port, CS_MAG_Pin, on_off)
 
-#define LIS3MDL_Delay(ms)								osDelay(ms)
-#define LIS3MDL_TxRx(tx_data, rx_data, size, timeout)	HAL_SPI_TransmitReceive(&LIS3MDL_SPI, tx_data, rx_data, size, timeout)
-#define LIS3MDL_Tx(tx_data, size, timeout)				HAL_SPI_Transmit(&LIS3MDL_SPI, tx_data, size, timeout)
-#define LIS3MDL_Rx(rx_data, size, timeout)				HAL_SPI_Receive(&LIS3MDL_SPI, rx_data, size, timeout)
-
+/* Functions to be implemented by user */
+void LIS3MDL_ChipSelect(uint32_t on_off);
+void LIS3MDL_Delay(uint32_t ms);
+LIS3MDL_StatusTypeDef LIS3MDL_TxRx(uint8_t *pTxData, uint8_t *pRxData, uint16_t Size, uint32_t Timeout);
+LIS3MDL_StatusTypeDef LIS3MDL_Tx(uint8_t *pData, uint16_t Size, uint32_t Timeout);
+LIS3MDL_StatusTypeDef LIS3MDL_Rx(uint8_t *pData, uint16_t Size, uint32_t Timeout);
+LIS3MDL_StatusTypeDef LIS3MDL_Tx_DMA(uint8_t *pData, uint16_t Size);
+LIS3MDL_StatusTypeDef LIS3MDL_Rx_DMA(uint8_t *pData, uint16_t Size);
+LIS3MDL_StatusTypeDef LIS3MDL_Tx_DMA_WaitToFinish(uint32_t timeout);
+LIS3MDL_StatusTypeDef LIS3MDL_Rx_DMA_WaitToFinish(uint32_t timeout);
 #endif /* LIS3MDL_CONF_H_ */

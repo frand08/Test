@@ -57,12 +57,16 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern DMA_HandleTypeDef hdma_spi1_rx;
+extern DMA_HandleTypeDef hdma_spi1_tx;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern UART_HandleTypeDef huart1;
 extern TIM_HandleTypeDef htim1;
 
 /* USER CODE BEGIN EV */
 extern osMessageQId UARTQueueHandle;
+extern osMessageQId SPITxQueueHandle;
+extern osMessageQId SPIRxQueueHandle;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -164,6 +168,46 @@ void DebugMon_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles DMA1 channel2 global interrupt.
+  */
+void DMA1_Channel2_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel2_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel2_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_spi1_rx);
+  /* USER CODE BEGIN DMA1_Channel2_IRQn 1 */
+
+  /* SPI Rx DMA */
+  /* As this happens on an IRQ, the scheduler gets called before returning to
+   * the last task in order to run the highest priority task available */
+  /* We don't care the message sent, that's why is 0 */
+  osMessagePut(SPIRxQueueHandle, 0, 0);
+
+  /* USER CODE END DMA1_Channel2_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 channel3 global interrupt.
+  */
+void DMA1_Channel3_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel3_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel3_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_spi1_tx);
+  /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
+
+  /* SPI Tx DMA ISR */
+  /* As this happens on an IRQ, the scheduler gets called before returning to
+   * the last task in order to run the highest priority task available */
+  /* We don't care the message sent, that's why is 0 */
+  osMessagePut(SPITxQueueHandle, 0, 0);
+
+  /* USER CODE END DMA1_Channel3_IRQn 1 */
+}
+
+/**
   * @brief This function handles DMA1 channel5 global interrupt.
   */
 void DMA1_Channel5_IRQHandler(void)
@@ -174,6 +218,7 @@ void DMA1_Channel5_IRQHandler(void)
   HAL_DMA_IRQHandler(&hdma_usart1_rx);
   /* USER CODE BEGIN DMA1_Channel5_IRQn 1 */
 
+  /* UART Rx DMA */
   /* As this happens on an IRQ, the scheduler gets called before returning to
    * the last task in order to run the highest priority task available */
   /* We don't care the message sent, that's why is 0 */

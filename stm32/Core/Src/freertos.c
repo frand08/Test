@@ -31,8 +31,9 @@
 #include <string.h>
 #include "cmsis_os.h"
 #include "usart.h"
-#include "w25q80dv.h"
 #include "lis3mdl.h"
+#include "w25q80dv.h"
+#include "extflash_memory.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,8 +43,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-/* ID + x_mag + y_mag + z_mag + temp = 12 bytes = 12 * 8 bits */
-#define FLASH_BITS_STORED_PER_DATA	12 * 8
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -56,21 +55,24 @@
 
 extern UART_HandleTypeDef huart1;
 extern DMA_HandleTypeDef hdma_usart1_rx;
-extern osMessageQId UARTQueueHandle;
-extern osSemaphoreId SPISemaphoreHandle;
+
+osThreadId MagTaskHandle;
+
 /* USER CODE END Variables */
 osThreadId UARTTaskHandle;
-osThreadId MagTaskHandle;
 osMessageQId UARTQueueHandle;
+osMessageQId SPITxQueueHandle;
+osMessageQId SPIRxQueueHandle;
 osSemaphoreId SPISemaphoreHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 
+void StartMagTask(void const * argument);
+
 /* USER CODE END FunctionPrototypes */
 
 void StartUARTTask(void const * argument);
-void StartMagTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -122,6 +124,14 @@ void MX_FREERTOS_Init(void) {
   osMessageQDef(UARTQueue, 1, uint32_t);
   UARTQueueHandle = osMessageCreate(osMessageQ(UARTQueue), NULL);
 
+  /* definition and creation of SPITxQueue */
+  osMessageQDef(SPITxQueue, 1, uint32_t);
+  SPITxQueueHandle = osMessageCreate(osMessageQ(SPITxQueue), NULL);
+
+  /* definition and creation of SPIRxQueue */
+  osMessageQDef(SPIRxQueue, 1, uint32_t);
+  SPIRxQueueHandle = osMessageCreate(osMessageQ(SPIRxQueue), NULL);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
@@ -130,10 +140,6 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of UARTTask */
   osThreadDef(UARTTask, StartUARTTask, osPriorityAboveNormal, 0, 128);
   UARTTaskHandle = osThreadCreate(osThread(UARTTask), NULL);
-
-  /* definition and creation of MagTask */
-  osThreadDef(MagTask, StartMagTask, osPriorityNormal, 0, 128);
-  MagTaskHandle = osThreadCreate(osThread(MagTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -152,13 +158,41 @@ void StartUARTTask(void const * argument)
 {
   /* USER CODE BEGIN StartUARTTask */
   char rx_buffer[UART_DATA_SIZE];
-  char read_data[4], dt_buff[6];
+  char dt_buff[30];
   osEvent event;
-  float x_mag, y_mag, z_mag, temp_mag;
-  int received_id_value;
+  int16_t x_mag, y_mag, z_mag, temp_mag;
+  uint32_t received_id_value;
 
   /* Start DMA RX interrupt (circular mode) */
   HAL_UART_Receive_DMA(&huart1,(uint8_t*)&rx_buffer[0],UART_DATA_SIZE);
+
+  /* Try to initialize both memory and magnetometer, if error reset program */
+  if(osSemaphoreWait(SPISemaphoreHandle, osWaitForever) > 0)
+  {
+	  /* If memory init could not be done,
+	   * inform via UART and do something (reset maybe).
+	   */
+	  if(W25Q80DV_Init() != W25Q80DV_OK)
+	  {
+		SERIAL_SEND("FLASH init error. Resetting MCU\r\n");
+		/* TODO: Reset MCU or something... */
+		osThreadTerminate(UARTTaskHandle);
+	  }
+
+	  /* If magnetometer init could not be done,
+	   * inform via UART and do something (reset maybe).
+	   */
+	  if(LIS3MDL_Init() != LIS3MDL_OK)
+	  {
+		SERIAL_SEND("FLASH init error. Resetting MCU\r\n");
+		/* TODO: Reset MCU or something... */
+		osThreadTerminate(UARTTaskHandle);
+	  }
+  }
+
+  /* Otherwise define and create magnetometer task */
+  osThreadDef(MagTask, StartMagTask, osPriorityNormal, 0, 128);
+  MagTaskHandle = osThreadCreate(osThread(MagTask), NULL);
 
   /* Infinite loop */
   for(;;)
@@ -167,43 +201,39 @@ void StartUARTTask(void const * argument)
 	event = osMessageGet(UARTQueueHandle, osWaitForever);
 	if(event.status == osEventMessage)
 	{
- 	  /* Take SPI semaphore when available */
+ 	  /* Take SPI semaphore when available, so that we receive the data as fast as possible */
 	  if(osSemaphoreWait(SPISemaphoreHandle, osWaitForever) > 0)
 	  {
 		/* Get ID value */
 		received_id_value = atoi(rx_buffer);
 
-		W25Q80DV_ReadBytes(received_id_value * FLASH_BITS_STORED_PER_DATA, (uint8_t*)read_data, 4);
-
-		if(atoi(read_data) != received_id_value)
+		/* Check if data present on memory, otherwise send error. */
+		if(EXTFLASH_CheckID(received_id_value) != EXTFLASH_OK)
 		{
 		  SERIAL_SEND("Error. Data not found.\r\n");
 		}
 		else
 		{
-		  W25Q80DV_ReadBytes((received_id_value * FLASH_BITS_STORED_PER_DATA + 32), (uint8_t*)read_data, 4);
-		  x_mag = atof(read_data);
-		  SERIAL_SEND("Magnetometer x value = ");
-		  sprintf(dt_buff,"%4.2f", x_mag);
-		  SERIAL_SEND(dt_buff);SERIAL_SEND("\r\n");
+		  /* Get data from FLASH memory and send it via UART if OK */
+		  if(EXTFLASH_ReadData(received_id_value, &x_mag, &y_mag, &z_mag, &temp_mag) == EXTFLASH_OK)
+		  {
+			  /* Send data via UART */
+			  sprintf(dt_buff,"Magnetometer x value = %d\r\n", x_mag);
+			  SERIAL_SEND(dt_buff);
 
-		  W25Q80DV_ReadBytes((received_id_value * FLASH_BITS_STORED_PER_DATA + 64), (uint8_t*)read_data, 4);
-		  y_mag = atof(read_data);
-		  SERIAL_SEND("Magnetometer y value = ");
-		  sprintf(dt_buff,"%4.2f", y_mag);
-		  SERIAL_SEND(dt_buff);SERIAL_SEND("\r\n");
+			  sprintf(dt_buff,"Magnetometer y value = %d\r\n", y_mag);
+			  SERIAL_SEND(dt_buff);
 
-		  W25Q80DV_ReadBytes((received_id_value * FLASH_BITS_STORED_PER_DATA + 96), (uint8_t*)read_data, 4);
-		  z_mag = atof(read_data);
-		  SERIAL_SEND("Magnetometer z value = ");
-		  sprintf(dt_buff,"%4.2f", z_mag);
-		  SERIAL_SEND(dt_buff);SERIAL_SEND("\r\n");
+			  sprintf(dt_buff,"Magnetometer z value = %d\r\n", z_mag);
+			  SERIAL_SEND(dt_buff);
 
-		  W25Q80DV_ReadBytes((received_id_value * FLASH_BITS_STORED_PER_DATA + 128), (uint8_t*)read_data, 4);
-		  temp_mag = atof(read_data);
-		  SERIAL_SEND("Temperature value = ");
-		  sprintf(dt_buff,"%4.2f", temp_mag);
-		  SERIAL_SEND(dt_buff);SERIAL_SEND("\r\n");
+			  sprintf(dt_buff,"Temperature value = %d\r\n", temp_mag);
+			  SERIAL_SEND(dt_buff);
+		  }
+		  else
+		  {
+		    SERIAL_SEND("Error reading external flash data\r\n");
+		  }
 		}
 
 		/* Release SPI semaphore */
@@ -214,19 +244,19 @@ void StartUARTTask(void const * argument)
   /* USER CODE END StartUARTTask */
 }
 
-/* USER CODE BEGIN Header_StartMagTask */
+/* Private application code --------------------------------------------------*/
+/* USER CODE BEGIN Application */
+
 /**
-* @brief Function implementing the MagTask thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartMagTask */
+  * @brief Function implementing the MagTask thread.
+  * @param argument: Not used
+  * @retval None
+  */
 void StartMagTask(void const * argument)
 {
-  /* USER CODE BEGIN StartMagTask */
   LIS3MDL_DataTypeDef read_data;
-  uint32_t memory_offset = 0;
-  uint8_t sector_data[W25Q80DV_SECTOR_SIZE];
+  LIS3MDL_StatusTypeDef magnetometer_retval = LIS3MDL_ERROR;
+  uint32_t memory_id = 0;
 
   /* Infinite loop */
   for(;;)
@@ -234,33 +264,38 @@ void StartMagTask(void const * argument)
     /* Take SPI semaphore when available */
     if(osSemaphoreWait(SPISemaphoreHandle, osWaitForever) > 0)
     {
+        /* Read magnetometer values */
+    	magnetometer_retval = LIS3MDL_ReadValues(&read_data);
 
-      /* FIXME: Check all of this */
-
-      /* Increment memory offset */
-      /* Read magnetometer values */
-	  LIS3MDL_ReadValues(&read_data);
-
-	  /* First, read data of target sector*/
-	  W25Q80DV_ReadSector((memory_offset & (0xFFFFF000)) * FLASH_BITS_STORED_PER_DATA, sector_data);
-
-	  /* Then, erase sector */
-	  W25Q80DV_EraseSector(memory_offset * FLASH_BITS_STORED_PER_DATA);
-
-	  /* Finally, write the new values and write the sector in memory */
-	  sector_data[(memory_offset & (0xFFF)) * FLASH_BITS_STORED_PER_DATA] = memory_offset;
-	  sector_data[(memory_offset & (0xFFF)) * FLASH_BITS_STORED_PER_DATA + 32] = read_data.mag_x;
-	  sector_data[(memory_offset & (0xFFF)) * FLASH_BITS_STORED_PER_DATA + 48] = read_data.mag_y;
-	  sector_data[(memory_offset & (0xFFF)) * FLASH_BITS_STORED_PER_DATA + 64] = read_data.mag_z;
-	  sector_data[(memory_offset & (0xFFF)) * FLASH_BITS_STORED_PER_DATA + 80] = read_data.temp;
+    	/* Release SPI semaphore */
+    	osSemaphoreRelease(SPISemaphoreHandle);
     }
+
+    /* In case a UART receive interrupt occured during the LIS3MDL read, release the SPI
+     * semaphore to unlock the serial thread. An osDelay is added to call the scheduler */
+    osDelay(1);
+
+    /* Try to write only if magnetometer data read OK */
+    if(magnetometer_retval == LIS3MDL_OK)
+    {
+	  /* Take SPI semaphore when available */
+	  if(osSemaphoreWait(SPISemaphoreHandle, osWaitForever) > 0)
+	  {
+		/* Write to FLASH memory and if OK increment offset */
+		if(EXTFLASH_WriteData(memory_id, read_data.mag_x, read_data.mag_y, read_data.mag_z, read_data.temp) == EXTFLASH_OK)
+		{
+		  /* Increment memory offset */
+		  memory_id++;
+		}
+
+		/* Release SPI semaphore */
+		osSemaphoreRelease(SPISemaphoreHandle);
+	  }
+    }
+	/* Send data every second (if possible) */
+	osDelay(1000);
   }
-  /* USER CODE END StartMagTask */
 }
-
-/* Private application code --------------------------------------------------*/
-/* USER CODE BEGIN Application */
-
 /* USER CODE END Application */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

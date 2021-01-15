@@ -1,14 +1,16 @@
-/*
- * lis3mdl.h
- *
- *  Created on: Jan 13, 2021
- *      Author: fdominguez
- */
+/**
+  ******************************************************************************
+  * @file lis3mdl.h
+  * @author fdominguez
+  * @date 01/13/2020
+  * @version 1.0.0
+  ******************************************************************************
+  */
 
 #ifndef LIS3MDL_H_
 #define LIS3MDL_H_
 
-#include "lis3mdl_conf.h"
+#include <stdint.h>
 
 #define LIS3MDL_WHO_AM_I		0x0F
 #define LIS3MDL_WHO_AM_I_RET	0b00111101
@@ -113,6 +115,6 @@ typedef union
 
 LIS3MDL_StatusTypeDef LIS3MDL_Init(void);
 
-void LIS3MDL_ReadValues(LIS3MDL_DataTypeDef *data);
+LIS3MDL_StatusTypeDef LIS3MDL_ReadValues(LIS3MDL_DataTypeDef *data);
 
 #endif /* LIS3MDL_H_ */

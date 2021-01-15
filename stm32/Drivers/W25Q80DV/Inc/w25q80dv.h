@@ -1,14 +1,16 @@
-/*
- * w25q80dv.h
- *
- *  Created on: Jan 13, 2021
- *      Author: fdominguez
- */
+/**
+  ******************************************************************************
+  * @file w25q80dv.h
+  * @author fdominguez
+  * @date 01/13/2020
+  * @version 1.0.0
+  ******************************************************************************
+  */
 
 #ifndef W25Q80DV_H_
 #define W25Q80DV_H_
 
-#include "w25q80dv_conf.h"
+#include <stdint.h>
 
 /* Number of retrials when initializing the memory */
 #define W25Q80DV_RETIRALS		4
@@ -24,7 +26,7 @@
 #define W25Q80DV_STATUS_REG_1	0x05
 #define W25Q80DV_STATUS_REG_2	0x35
 
-
+/* Bytes per sector */
 #define W25Q80DV_SECTOR_SIZE	4096
 /* Based on sector size */
 #define W25Q80DV_BLOCK_SIZE		16
@@ -60,13 +62,13 @@ typedef struct
 
 
 W25Q80DV_StatusTypeDef W25Q80DV_Reset(void);
-void W25Q80DV_WriteEnable(void);
+W25Q80DV_StatusTypeDef W25Q80DV_WriteEnable(void);
 W25Q80DV_StatusTypeDef W25Q80DV_Init(void);
-void W25Q80DV_WriteDisable(void);
-void W25Q80DV_ReadBytes(uint32_t init_pos, uint8_t* data, uint32_t count);
-void W25Q80DV_ReadSector(uint32_t init_pos, uint8_t* received_data);
-void W25Q80DV_ReadStatusRegister(uint8_t* data);
-void W25Q80DV_EraseSector(uint32_t init_pos);
-void W25Q80DV_WriteSector(uint32_t init_pos, uint8_t* data);
+W25Q80DV_StatusTypeDef W25Q80DV_WriteDisable(void);
+W25Q80DV_StatusTypeDef W25Q80DV_ReadBytes(uint32_t init_pos, uint8_t* data, uint32_t count);
+W25Q80DV_StatusTypeDef W25Q80DV_ReadSector(uint32_t init_pos, uint8_t* received_data);
+W25Q80DV_StatusTypeDef W25Q80DV_ReadStatusRegister(uint8_t* data);
+W25Q80DV_StatusTypeDef W25Q80DV_EraseSector(uint32_t init_pos);
+W25Q80DV_StatusTypeDef W25Q80DV_WriteSector(uint32_t init_pos, uint8_t* data);
 
 #endif /* W25Q80DV_H_ */
