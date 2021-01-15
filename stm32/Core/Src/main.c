@@ -96,10 +96,6 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  /* FIXME: Ideally, these two inits shouldn't be here,
-   * but in their respective threads. Check what is needed
-   */
-
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

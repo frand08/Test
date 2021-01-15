@@ -1,0 +1,35 @@
+/**
+  @file mainpage.h
+*/
+
+/**
+  * @mainpage Main Page
+  * 
+  * @brief Using a STM32F103, this test reads magnetometer and temperature values from the LIS3MDL and stores every second in the FLASH memory W25Q80DV, assigning a unique ID on each value. In case a message is received from the UART1 and it matches with any of the IDs stored in the memory, the MCU will transmit via UART1 the data, otherwise it will give an error
+  *  <ul>
+  * 	<li> Weather station (CFG_WEATHER_STATION), using:
+  * 		<ol>
+  * 		<li>rain gauge -> PB8 (external anti rebound circuit needed)
+  *		<li>BME280 -> PB6, PB7 and SDO sensor pin to ground
+  *		</ol>
+  *	<li> Freatimetro sensor (CFG_FREATIMETRO) -> PB0 (low pass filter)
+  *	<li> Three bebedero sensors
+  *		<ol>
+  *		<li>bebedero 1 (CFG_BEBEDERO_1) -> PA6
+  *		<li>bebedero 2 (CFG_BEBEDERO_2) -> PA7
+  *		<li>bebedero 3 (CFG_BEBEDERO_3) -> PB0
+  *		</ol>
+  *	<li> DS18B20 sensor (CFG_DS18B20) -> PA5
+  *	<li> Ultrasonic (CFG_ULTRASONIC) -> PA4 (Trigger), PB9 (Echo)
+  *	<li> Testing, with same pins as before:
+  *		<ol>
+  *		<li>DS18B20 (CFG_DS18B20_TEST)
+  *		<li>Ultrasonic (CFG_ULTRASONIC_TEST)
+  *		<li>Bebederos (CFG_BEBEDERO_TEST)
+  *		<li>Freatimetro (CFG_FREATIMETRO_TEST)
+  *		</ol>
+  * </ul>
+  *
+  * Main flowchart:
+  * @image html MedirioIoT_Flowchart.svg
+*/

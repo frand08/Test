@@ -1,0 +1,12 @@
+<map id="W25Q80DV_ReadBytes" name="W25Q80DV_ReadBytes">
+<area shape="rect" id="node1" title="Read some bytes based on initial position." alt="" coords="5,183,179,209"/>
+<area shape="rect" id="node2" href="$lis3mdl__conf_8c.html#ad3ea125cdd6250300d1c332652e139de" title="ON/OFF magnetometer chip select pin." alt="" coords="558,5,730,32"/>
+<area shape="rect" id="node3" href="$lis3mdl__conf_8c.html#a1de4e79d0a9e295a52e76450b519f39f" title="Delay in milliseconds." alt="" coords="573,56,715,83"/>
+<area shape="rect" id="node4" href="$lis3mdl__conf_8c.html#a205be3fab0ea8da0d83a78c815559a6e" title="Receives a number of bytes." alt="" coords="290,259,410,285"/>
+<area shape="rect" id="node5" href="$lis3mdl__conf_8c.html#a6c2d71a422266a8c2dbc93b0cefc6805" title="Receives a number of bytes using DMA." alt="" coords="271,309,429,336"/>
+<area shape="rect" id="node6" href="$lis3mdl__conf_8c.html#a83d14ac29c1ddd3f0aef622282f7a32a" title="Waits for last SPI receive operation to be completed." alt="" coords="227,360,473,387"/>
+<area shape="rect" id="node7" href="$lis3mdl__conf_8c.html#a7775015cb4c759eabbbddfe8f903acc9" title="Transmits a number of bytes." alt="" coords="585,157,703,184"/>
+<area shape="rect" id="node8" href="$lis3mdl__conf_8c.html#a2e17264c13c944d054066b6a8a7b26ca" title="Transmits a number of bytes using DMA." alt="" coords="565,208,723,235"/>
+<area shape="rect" id="node9" href="$w25q80dv_8c.html#a070fb2732e86a991500214598dd9eec2" title="Disables write operation." alt="" coords="257,107,443,133"/>
+<area shape="rect" id="node10" href="$lis3mdl__conf_8c.html#af02b29325dc32e5e998b2fb8a1be3d01" title="Waits for last SPI transmit operation to be completed." alt="" coords="521,107,767,133"/>
+</map>

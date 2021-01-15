@@ -1,0 +1,8 @@
+<map id="W25Q80DV_ReadStatusRegister" name="W25Q80DV_ReadStatusRegister">
+<area shape="rect" id="node1" title="Reads status register. It is recommended to use the W25Q80DV_StatusRegTypeDef to read the value." alt="" coords="5,107,236,133"/>
+<area shape="rect" id="node2" href="$lis3mdl__conf_8c.html#ad3ea125cdd6250300d1c332652e139de" title="ON/OFF magnetometer chip select pin." alt="" coords="321,5,493,32"/>
+<area shape="rect" id="node3" href="$lis3mdl__conf_8c.html#a1de4e79d0a9e295a52e76450b519f39f" title="Delay in milliseconds." alt="" coords="337,56,478,83"/>
+<area shape="rect" id="node4" href="$lis3mdl__conf_8c.html#a83d14ac29c1ddd3f0aef622282f7a32a" title="Waits for last SPI receive operation to be completed." alt="" coords="284,107,531,133"/>
+<area shape="rect" id="node5" href="$lis3mdl__conf_8c.html#ae600f0fbfbfc47987b798a3c9bd4f948" title="Transmit and then receives a number of bytes." alt="" coords="339,157,475,184"/>
+<area shape="rect" id="node6" href="$lis3mdl__conf_8c.html#a332c053967b6e0f67a33fe39e91fce2b" title="Transmit and then receives a number of bytes using DMA." alt="" coords="320,208,495,235"/>
+</map>

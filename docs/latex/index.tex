@@ -1,0 +1,20 @@
+\hypertarget{index_autotoc_md0}{}\doxysection{Description}\label{index_autotoc_md0}
+Using a S\+T\+M32\+F103, this test reads magnetometer and temperature values from the L\+I\+S3\+M\+DL and stores every second in the F\+L\+A\+SH memory W25\+Q80\+DV, assigning a unique ID on each value. In case a message is received from the U\+A\+R\+T1 and it matches with any of the I\+Ds stored in the memory, the M\+CU will transmit via U\+A\+R\+T1 the data, otherwise it will give an error.
+
+Languages\+: {\ttfamily C}
+
+T\+AG\textquotesingle{}s\+: {\ttfamily tag\+:A\+RM},{\ttfamily tag\+:S\+T\+M32}, {\ttfamily tag\+:D\+R\+I\+V\+ER}, {\ttfamily tag\+:Free\+R\+T\+OS}, {\ttfamily tag\+:C\+M\+S\+I\+S-\/\+R\+T\+OS}, {\ttfamily tag\+:W25\+Q80\+DV}, {\ttfamily tag\+:L\+I\+S3\+M\+DL}\hypertarget{index_autotoc_md1}{}\doxysection{Hardware connection between I\+Cs}\label{index_autotoc_md1}
+ 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{hardware.png}}
+\end{DoxyImageNoCaption}
+  \hypertarget{index_autotoc_md2}{}\doxysection{Dependencies}\label{index_autotoc_md2}
+--- S\+T\+M32\+Cube\+I\+DE v1.\+5.\+0 o greater.\hypertarget{index_autotoc_md3}{}\doxysection{Repository structure}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$/stm32/stm32.ioc$\ast$$\ast$ --- S\+T\+M32\+Cube\+I\+DE configuration file.
+\item $\ast$$\ast$/stm32/\+Core$\ast$$\ast$ --- Core functions, initializations, I\+S\+Rs based on application.
+\item $\ast$$\ast$/stm32/\+Drivers$\ast$$\ast$ --- Drivers needed by the core functions.
+\item $\ast$$\ast$/stm32/\+Middlewares$\ast$$\ast$ --- Free\+R\+T\+OS source code, with the addition of the C\+M\+S\+I\+S-\/\+R\+T\+OS A\+PI.
+\item $\ast$$\ast$/stm32/\+Documentation$\ast$$\ast$ --- Doxygen code documentation. 
+\end{DoxyItemize}

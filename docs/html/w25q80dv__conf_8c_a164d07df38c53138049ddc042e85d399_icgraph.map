@@ -1,0 +1,7 @@
+<map id="LIS3MDL_TxRx" name="LIS3MDL_TxRx">
+<area shape="rect" id="node1" title="Transmit and then receives a number of bytes." alt="" coords="624,5,743,32"/>
+<area shape="rect" id="node2" href="$lis3mdl_8h.html#aec572a4b9b29ecc7c210e3c04e9bb851" title="Initializes the magnetometer." alt="" coords="469,5,576,32"/>
+<area shape="rect" id="node3" href="$freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e" title="Function implementing the UARTTask thread." alt="" coords="303,5,421,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="108,5,255,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>

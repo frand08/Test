@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['sec_99',['SEC',['../structW25Q80DV__StatusRegTypeDef.html#a2e790666083637310e384e689255746d',1,'W25Q80DV_StatusRegTypeDef']]],
+  ['sim_100',['SIM',['../unionLIS3MDL__CtrlReg3TypeDef.html#afce619908629086b7bd5fe4aaa82f50f',1,'LIS3MDL_CtrlReg3TypeDef']]],
+  ['soft_5frst_101',['SOFT_RST',['../unionLIS3MDL__CtrlReg2TypeDef.html#a6aeaba7523b13893e3d403c424218ff6',1,'LIS3MDL_CtrlReg2TypeDef']]],
+  ['spi_2ec_102',['spi.c',['../spi_8c.html',1,'']]],
+  ['spi_2eh_103',['spi.h',['../spi_8h.html',1,'']]],
+  ['spirxqueuehandle_104',['SPIRxQueueHandle',['../freertos_8c.html#a5ee0f2482bbc2a2b4776be1815a21340',1,'SPIRxQueueHandle():&#160;freertos.c'],['../stm32f1xx__it_8c.html#a5ee0f2482bbc2a2b4776be1815a21340',1,'SPIRxQueueHandle():&#160;freertos.c'],['../lis3mdl__conf_8c.html#a5ee0f2482bbc2a2b4776be1815a21340',1,'SPIRxQueueHandle():&#160;freertos.c'],['../w25q80dv__conf_8c.html#a5ee0f2482bbc2a2b4776be1815a21340',1,'SPIRxQueueHandle():&#160;freertos.c']]],
+  ['spisemaphorehandle_105',['SPISemaphoreHandle',['../freertos_8c.html#aa0c584b11befda1e42659824e86cd337',1,'freertos.c']]],
+  ['spitxqueuehandle_106',['SPITxQueueHandle',['../freertos_8c.html#a8c37aca57d037596b651eb312178a9d9',1,'SPITxQueueHandle():&#160;freertos.c'],['../stm32f1xx__it_8c.html#a8c37aca57d037596b651eb312178a9d9',1,'SPITxQueueHandle():&#160;freertos.c'],['../lis3mdl__conf_8c.html#a8c37aca57d037596b651eb312178a9d9',1,'SPITxQueueHandle():&#160;freertos.c'],['../w25q80dv__conf_8c.html#a8c37aca57d037596b651eb312178a9d9',1,'SPITxQueueHandle():&#160;freertos.c']]],
+  ['srp0_107',['SRP0',['../structW25Q80DV__StatusRegTypeDef.html#a161975b1df5c55dac394ac100bb63e86',1,'W25Q80DV_StatusRegTypeDef']]],
+  ['srp1_108',['SRP1',['../structW25Q80DV__StatusRegTypeDef.html#aef4b58e0b2538ba807dc6ce23c0c889e',1,'W25Q80DV_StatusRegTypeDef']]],
+  ['st_109',['ST',['../unionLIS3MDL__CtrlReg1TypeDef.html#a858854fedac7a17abd8ce011908a7f74',1,'LIS3MDL_CtrlReg1TypeDef']]],
+  ['startmagtask_110',['StartMagTask',['../freertos_8c.html#ad79ce8af311c18d3a05153a831c5e124',1,'freertos.c']]],
+  ['startuarttask_111',['StartUARTTask',['../freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e',1,'freertos.c']]],
+  ['stm32f1xx_5fhal_5fconf_2eh_112',['stm32f1xx_hal_conf.h',['../stm32f1xx__hal__conf_8h.html',1,'']]],
+  ['stm32f1xx_5fhal_5fmsp_2ec_113',['stm32f1xx_hal_msp.c',['../stm32f1xx__hal__msp_8c.html',1,'']]],
+  ['stm32f1xx_5fhal_5ftimebase_5ftim_2ec_114',['stm32f1xx_hal_timebase_tim.c',['../stm32f1xx__hal__timebase__tim_8c.html',1,'']]],
+  ['stm32f1xx_5fit_2ec_115',['stm32f1xx_it.c',['../stm32f1xx__it_8c.html',1,'']]],
+  ['stm32f1xx_5fit_2eh_116',['stm32f1xx_it.h',['../stm32f1xx__it_8h.html',1,'']]],
+  ['sus_117',['SUS',['../structW25Q80DV__StatusRegTypeDef.html#a3ef772fcd611598ca0fa484d120c9d09',1,'W25Q80DV_StatusRegTypeDef']]],
+  ['systemclock_5fconfig_118',['SystemClock_Config',['../main_8c.html#a70af21c671abfcc773614a9a4f63d920',1,'main.c']]],
+  ['systemcoreclock_119',['SystemCoreClock',['../FreeRTOSConfig_8h.html#aa3cd3e43291e81e795d642b79b6088e6',1,'FreeRTOSConfig.h']]]
+];

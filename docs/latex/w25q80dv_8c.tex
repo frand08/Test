@@ -1,0 +1,400 @@
+\hypertarget{w25q80dv_8c}{}\doxysection{stm32/\+Drivers/\+W25\+Q80\+D\+V/\+Src/w25q80dv.c File Reference}
+\label{w25q80dv_8c}\index{stm32/Drivers/W25Q80DV/Src/w25q80dv.c@{stm32/Drivers/W25Q80DV/Src/w25q80dv.c}}
+
+
+W25\+Q80\+DV serial S\+PI memory driver.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_ab3df1f457c09f9189e387541faec4ad9}{W25\+Q80\+D\+V\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the F\+L\+A\+SH memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_aebe65a81df64256ef57af86f0421ded9}{W25\+Q80\+D\+V\+\_\+\+Write\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enables write operation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_a070fb2732e86a991500214598dd9eec2}{W25\+Q80\+D\+V\+\_\+\+Write\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disables write operation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_a0f8c5b0db0652ec17aaea3cada9adf80}{W25\+Q80\+D\+V\+\_\+\+Reset}} (void)
+\begin{DoxyCompactList}\small\item\em Reset F\+L\+A\+SH memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_a121c0c1c0c64df34630ddc638ccf9b76}{W25\+Q80\+D\+V\+\_\+\+Read\+Bytes}} (uint32\+\_\+t init\+\_\+pos, uint8\+\_\+t $\ast$data, uint32\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em Read some bytes based on initial position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_ac4760abd9d055545a53cb143e7379ec2}{W25\+Q80\+D\+V\+\_\+\+Read\+Sector}} (uint32\+\_\+t init\+\_\+pos, uint8\+\_\+t $\ast$received\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Reads a complete sector starting in init\+\_\+pos (24 bits) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_a544d5b09bfe51f0b5836a4bd825a9105}{W25\+Q80\+D\+V\+\_\+\+Read\+Status\+Register}} (uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Reads status register. It is recommended to use the \mbox{\hyperlink{structW25Q80DV__StatusRegTypeDef}{W25\+Q80\+D\+V\+\_\+\+Status\+Reg\+Type\+Def}} to read the value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_a82a47faf2122747dde105330298e1363}{W25\+Q80\+D\+V\+\_\+\+Erase\+Sector}} (uint32\+\_\+t init\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Erases a complete sector starting in init\+\_\+pos (24 bits) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{w25q80dv_8c_a96abb75834fbf756d9bb10402893e894}{W25\+Q80\+D\+V\+\_\+\+Write\+Sector}} (uint32\+\_\+t init\+\_\+pos, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Writes a complete sector starting in init\+\_\+pos (24 bits) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+W25\+Q80\+DV serial S\+PI memory driver. 
+
+User configuration for W25\+Q80\+DV serial S\+PI memory driver.
+
+\begin{DoxyAuthor}{Author}
+fdominguez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/13/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 \begin{DoxyVerb}==============================================================================
+                      ##### How to use this driver #####
+==============================================================================
+
+  [..]
+  *** How to adapt the library to your own project and use it ***
+  ===========================================================
+  [..]
+
+  (#) Edit the functions defined in w25q80dv_conf.c to satisfy what they
+      require, using the specific functions you have.
+  (#) Select if you want to use DMA (non-blocking) or not (blocking).
+  (#) Include the w25q80dv.h where you want to use the library.
+  (#) Initialize the library with W25Q80DV_Init(), then if OK you can read
+      or write data to flash memory
+\end{DoxyVerb}
+
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+fdominguez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/13/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{w25q80dv_8c_a82a47faf2122747dde105330298e1363}\label{w25q80dv_8c_a82a47faf2122747dde105330298e1363}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_EraseSector@{W25Q80DV\_EraseSector}}
+\index{W25Q80DV\_EraseSector@{W25Q80DV\_EraseSector}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_EraseSector()}{W25Q80DV\_EraseSector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Erase\+Sector (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{init\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Erases a complete sector starting in init\+\_\+pos (24 bits) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+pos} & Position where the sector begins \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 385 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a82a47faf2122747dde105330298e1363_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a82a47faf2122747dde105330298e1363_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_ab3df1f457c09f9189e387541faec4ad9}\label{w25q80dv_8c_ab3df1f457c09f9189e387541faec4ad9}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_Init@{W25Q80DV\_Init}}
+\index{W25Q80DV\_Init@{W25Q80DV\_Init}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Init()}{W25Q80DV\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the F\+L\+A\+SH memory. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 35 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_ab3df1f457c09f9189e387541faec4ad9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_ab3df1f457c09f9189e387541faec4ad9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_a121c0c1c0c64df34630ddc638ccf9b76}\label{w25q80dv_8c_a121c0c1c0c64df34630ddc638ccf9b76}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_ReadBytes@{W25Q80DV\_ReadBytes}}
+\index{W25Q80DV\_ReadBytes@{W25Q80DV\_ReadBytes}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_ReadBytes()}{W25Q80DV\_ReadBytes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Read\+Bytes (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{init\+\_\+pos,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint32\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Read some bytes based on initial position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+pos} & Position where the read action begins \\
+\hline
+{\em count} & Number of bytes to read \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 238 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a121c0c1c0c64df34630ddc638ccf9b76_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a121c0c1c0c64df34630ddc638ccf9b76_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_ac4760abd9d055545a53cb143e7379ec2}\label{w25q80dv_8c_ac4760abd9d055545a53cb143e7379ec2}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_ReadSector@{W25Q80DV\_ReadSector}}
+\index{W25Q80DV\_ReadSector@{W25Q80DV\_ReadSector}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_ReadSector()}{W25Q80DV\_ReadSector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Read\+Sector (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{init\+\_\+pos,  }\item[{uint8\+\_\+t $\ast$}]{received\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Reads a complete sector starting in init\+\_\+pos (24 bits) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+pos} & Position where the sector begins \\
+\hline
+{\em received\+\_\+data} & Data read (W25\+Q80\+D\+V\+\_\+\+S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 283 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_ac4760abd9d055545a53cb143e7379ec2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_ac4760abd9d055545a53cb143e7379ec2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_a544d5b09bfe51f0b5836a4bd825a9105}\label{w25q80dv_8c_a544d5b09bfe51f0b5836a4bd825a9105}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_ReadStatusRegister@{W25Q80DV\_ReadStatusRegister}}
+\index{W25Q80DV\_ReadStatusRegister@{W25Q80DV\_ReadStatusRegister}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_ReadStatusRegister()}{W25Q80DV\_ReadStatusRegister()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Read\+Status\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Reads status register. It is recommended to use the \mbox{\hyperlink{structW25Q80DV__StatusRegTypeDef}{W25\+Q80\+D\+V\+\_\+\+Status\+Reg\+Type\+Def}} to read the value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data read (2 bytes) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 332 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a544d5b09bfe51f0b5836a4bd825a9105_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a544d5b09bfe51f0b5836a4bd825a9105_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_a0f8c5b0db0652ec17aaea3cada9adf80}\label{w25q80dv_8c_a0f8c5b0db0652ec17aaea3cada9adf80}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_Reset@{W25Q80DV\_Reset}}
+\index{W25Q80DV\_Reset@{W25Q80DV\_Reset}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Reset()}{W25Q80DV\_Reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reset F\+L\+A\+SH memory. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 163 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a0f8c5b0db0652ec17aaea3cada9adf80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a0f8c5b0db0652ec17aaea3cada9adf80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_a070fb2732e86a991500214598dd9eec2}\label{w25q80dv_8c_a070fb2732e86a991500214598dd9eec2}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_WriteDisable@{W25Q80DV\_WriteDisable}}
+\index{W25Q80DV\_WriteDisable@{W25Q80DV\_WriteDisable}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_WriteDisable()}{W25Q80DV\_WriteDisable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Write\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disables write operation. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 129 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a070fb2732e86a991500214598dd9eec2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a070fb2732e86a991500214598dd9eec2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_aebe65a81df64256ef57af86f0421ded9}\label{w25q80dv_8c_aebe65a81df64256ef57af86f0421ded9}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_WriteEnable@{W25Q80DV\_WriteEnable}}
+\index{W25Q80DV\_WriteEnable@{W25Q80DV\_WriteEnable}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_WriteEnable()}{W25Q80DV\_WriteEnable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Write\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enables write operation. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 96 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_aebe65a81df64256ef57af86f0421ded9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_aebe65a81df64256ef57af86f0421ded9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{w25q80dv_8c_a96abb75834fbf756d9bb10402893e894}\label{w25q80dv_8c_a96abb75834fbf756d9bb10402893e894}} 
+\index{w25q80dv.c@{w25q80dv.c}!W25Q80DV\_WriteSector@{W25Q80DV\_WriteSector}}
+\index{W25Q80DV\_WriteSector@{W25Q80DV\_WriteSector}!w25q80dv.c@{w25q80dv.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_WriteSector()}{W25Q80DV\_WriteSector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Write\+Sector (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{init\+\_\+pos,  }\item[{uint8\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Writes a complete sector starting in init\+\_\+pos (24 bits) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+pos} & Position where the sector begins \\
+\hline
+{\em data} & Data to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 425 of file w25q80dv.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a96abb75834fbf756d9bb10402893e894_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{w25q80dv_8c_a96abb75834fbf756d9bb10402893e894_icgraph}
+\end{center}
+\end{figure}

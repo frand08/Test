@@ -1,0 +1,16 @@
+<map id="W25Q80DV_Tx_DMA_WaitToFinish" name="W25Q80DV_Tx_DMA_WaitToFinish">
+<area shape="rect" id="node1" title="Waits for last SPI transmit operation to be completed." alt="" coords="1361,87,1607,113"/>
+<area shape="rect" id="node2" href="$w25q80dv_8c.html#a0f8c5b0db0652ec17aaea3cada9adf80" title="Reset FLASH memory." alt="" coords="1150,8,1290,35"/>
+<area shape="rect" id="node7" href="$w25q80dv_8c.html#a070fb2732e86a991500214598dd9eec2" title="Disables write operation." alt="" coords="1127,61,1313,88"/>
+<area shape="rect" id="node11" href="$w25q80dv_8c.html#a96abb75834fbf756d9bb10402893e894" title="Writes a complete sector starting in init_pos (24 bits)" alt="" coords="900,119,1079,145"/>
+<area shape="rect" id="node14" href="$w25q80dv_8c.html#aebe65a81df64256ef57af86f0421ded9" title="Enables write operation." alt="" coords="1129,163,1311,189"/>
+<area shape="rect" id="node3" href="$w25q80dv_8c.html#ab3df1f457c09f9189e387541faec4ad9" title="Initializes the FLASH memory." alt="" coords="927,5,1051,32"/>
+<area shape="rect" id="node4" href="$freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e" title="Function implementing the UARTTask thread." alt="" coords="303,80,421,107"/>
+<area shape="rect" id="node5" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="108,80,255,107"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node8" href="$w25q80dv_8c.html#a121c0c1c0c64df34630ddc638ccf9b76" title="Read some bytes based on initial position." alt="" coords="679,61,852,88"/>
+<area shape="rect" id="node9" href="$extflash__memory_8h.html#ab480ef650cb206b243928597a50754e2" title="Checks the ID is present on FLASH memory." alt="" coords="475,55,625,81"/>
+<area shape="rect" id="node10" href="$extflash__memory_8h.html#a738991c510a5ee657d01d0c2a82d3599" title="Reads data from external FLASH memory." alt="" coords="469,105,631,132"/>
+<area shape="rect" id="node12" href="$extflash__memory_8h.html#a7b15ba76cf7cf4bda2bf3c68a91febfd" title="Writes data to external FLASH memory." alt="" coords="684,144,847,171"/>
+<area shape="rect" id="node13" href="$freertos_8c.html#ad79ce8af311c18d3a05153a831c5e124" title="Function implementing the MagTask thread." alt="" coords="495,156,605,183"/>
+</map>

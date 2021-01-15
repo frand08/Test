@@ -12,13 +12,12 @@
 
 #include <stdint.h>
 
+/* FIXME: 4096 (sector size) / 12 does not result in an integer, so certain data
+ * would be stored in two different sectors */
 /* ID + x_mag + y_mag + z_mag + temp = 12 bytes */
-/* TODO: 4096 (sector size) / 12 is not integer, so the same data can be found
- * in two different sectors */
-
 #define EXTFLASH_BYTES_STORED_PER_FIELD	12
-
 #define EXTFLASH_BYTES_TO_READ_DATA		(EXTFLASH_BYTES_STORED_PER_FIELD - 4)
+#define EXTFLASH_MAX_WRITE_RETRIALS		4
 
 typedef enum
 {

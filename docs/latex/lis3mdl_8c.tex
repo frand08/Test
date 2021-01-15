@@ -1,0 +1,118 @@
+\hypertarget{lis3mdl_8c}{}\doxysection{stm32/\+Drivers/\+L\+I\+S3\+M\+D\+L/\+Src/lis3mdl.c File Reference}
+\label{lis3mdl_8c}\index{stm32/Drivers/LIS3MDL/Src/lis3mdl.c@{stm32/Drivers/LIS3MDL/Src/lis3mdl.c}}
+
+
+L\+I\+S3\+M\+DL module driver.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl_8c_aec572a4b9b29ecc7c210e3c04e9bb851}{L\+I\+S3\+M\+D\+L\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the magnetometer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl_8c_a56dcc341e6a7d8744d3ade0572c5635f}{L\+I\+S3\+M\+D\+L\+\_\+\+Read\+Values}} (\mbox{\hyperlink{structLIS3MDL__DataTypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Data\+Type\+Def}} $\ast$data)
+\begin{DoxyCompactList}\small\item\em Read magnetometer data values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+L\+I\+S3\+M\+DL module driver. 
+
+\begin{DoxyAuthor}{Author}
+fdominguez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/13/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 \begin{DoxyVerb}==============================================================================
+                      ##### How to use this driver #####
+==============================================================================
+
+  [..]
+  *** How to adapt the library to your own project and use it ***
+  ===========================================================
+  [..]
+
+  (#) Edit the functions defined in lis3mdl_conf.c to satisfy what they
+      require, using the specific functions you have.
+  (#) Select if you want to use DMA (non-blocking) or not (blocking).
+  (#) Include the lis3mdl.h where you want to use the library.
+  (#) Initialize the library, then if OK you can read data values from the
+      magnetometer
+\end{DoxyVerb}
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lis3mdl_8c_aec572a4b9b29ecc7c210e3c04e9bb851}\label{lis3mdl_8c_aec572a4b9b29ecc7c210e3c04e9bb851}} 
+\index{lis3mdl.c@{lis3mdl.c}!LIS3MDL\_Init@{LIS3MDL\_Init}}
+\index{LIS3MDL\_Init@{LIS3MDL\_Init}!lis3mdl.c@{lis3mdl.c}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_Init()}{LIS3MDL\_Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} L\+I\+S3\+M\+D\+L\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the magnetometer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+I\+S3\+M\+DL} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 36 of file lis3mdl.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8c_aec572a4b9b29ecc7c210e3c04e9bb851_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8c_aec572a4b9b29ecc7c210e3c04e9bb851_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl_8c_a56dcc341e6a7d8744d3ade0572c5635f}\label{lis3mdl_8c_a56dcc341e6a7d8744d3ade0572c5635f}} 
+\index{lis3mdl.c@{lis3mdl.c}!LIS3MDL\_ReadValues@{LIS3MDL\_ReadValues}}
+\index{LIS3MDL\_ReadValues@{LIS3MDL\_ReadValues}!lis3mdl.c@{lis3mdl.c}}
+\doxysubsubsection{\texorpdfstring{LIS3MDL\_ReadValues()}{LIS3MDL\_ReadValues()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lis3mdl_8h_a8678b968f7ac5e9e6dcc1b2fc72bde12}{L\+I\+S3\+M\+D\+L\+\_\+\+Status\+Type\+Def}} L\+I\+S3\+M\+D\+L\+\_\+\+Read\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLIS3MDL__DataTypeDef}{L\+I\+S3\+M\+D\+L\+\_\+\+Data\+Type\+Def}} $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Read magnetometer data values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & L\+I\+S3\+M\+DL Data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em L\+I\+S3\+M\+DL} & Status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 206 of file lis3mdl.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8c_a56dcc341e6a7d8744d3ade0572c5635f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl_8c_a56dcc341e6a7d8744d3ade0572c5635f_icgraph}
+\end{center}
+\end{figure}

@@ -80,7 +80,7 @@ EXTFLASH_StatusTypeDef EXTFLASH_WriteData(uint32_t id_value, int16_t x_mag, int1
 {
   EXTFLASH_StatusTypeDef retval = EXTFLASH_ERROR;
   uint8_t sector_data[W25Q80DV_SECTOR_SIZE];
-  uint32_t index_aux;
+  uint32_t index_aux, write_retrials;
 
   /* TODO: Add the condition when we need to write 2 sectors (12 bytes against 4096) */
   index_aux = (id_value & (~(W25Q80DV_SECTOR_SIZE-1))) * W25Q80DV_SECTOR_SIZE;
@@ -105,8 +105,16 @@ EXTFLASH_StatusTypeDef EXTFLASH_WriteData(uint32_t id_value, int16_t x_mag, int1
 		  sector_data[index_aux + 10] = (temp >> 8);
 		  sector_data[(id_value & (W25Q80DV_SECTOR_SIZE-1)) * EXTFLASH_BYTES_STORED_PER_FIELD + 11] = (temp & 0xFF);
 
-		  if(W25Q80DV_WriteSector(((id_value & (~(W25Q80DV_SECTOR_SIZE-1))) * W25Q80DV_SECTOR_SIZE), (uint8_t*)sector_data) == W25Q80DV_OK)
-			  retval = EXTFLASH_OK;
+		  /* At this point, if data is not written in memory, all the information in that sector
+		   * would be lost, so the loop tries to minimize this to happen */
+		  for(write_retrials = 0; write_retrials < EXTFLASH_MAX_WRITE_RETRIALS; write_retrials++)
+		  {
+			  if(W25Q80DV_WriteSector(((id_value & (~(W25Q80DV_SECTOR_SIZE-1))) * W25Q80DV_SECTOR_SIZE), (uint8_t*)sector_data) == W25Q80DV_OK)
+			  {
+				  retval = EXTFLASH_OK;
+				  break;
+			  }
+		  }
 	  }
   }
   return retval;

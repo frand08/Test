@@ -1,0 +1,13 @@
+<map id="W25Q80DV_Rx_DMA" name="W25Q80DV_Rx_DMA">
+<area shape="rect" id="node1" title="Receives a number of bytes using DMA." alt="" coords="1125,60,1284,87"/>
+<area shape="rect" id="node2" href="$w25q80dv_8c.html#ab3df1f457c09f9189e387541faec4ad9" title="Initializes the FLASH memory." alt="" coords="927,5,1051,32"/>
+<area shape="rect" id="node6" href="$w25q80dv_8c.html#a121c0c1c0c64df34630ddc638ccf9b76" title="Read some bytes based on initial position." alt="" coords="679,60,852,87"/>
+<area shape="rect" id="node9" href="$w25q80dv_8c.html#ac4760abd9d055545a53cb143e7379ec2" title="Reads a complete sector starting in init_pos (24 bits)" alt="" coords="900,136,1077,163"/>
+<area shape="rect" id="node3" href="$freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e" title="Function implementing the UARTTask thread." alt="" coords="303,79,421,105"/>
+<area shape="rect" id="node4" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="108,79,255,105"/>
+<area shape="rect" id="node5" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,79,60,105"/>
+<area shape="rect" id="node7" href="$extflash__memory_8h.html#ab480ef650cb206b243928597a50754e2" title="Checks the ID is present on FLASH memory." alt="" coords="475,53,625,80"/>
+<area shape="rect" id="node8" href="$extflash__memory_8h.html#a738991c510a5ee657d01d0c2a82d3599" title="Reads data from external FLASH memory." alt="" coords="469,104,631,131"/>
+<area shape="rect" id="node10" href="$extflash__memory_8h.html#a7b15ba76cf7cf4bda2bf3c68a91febfd" title="Writes data to external FLASH memory." alt="" coords="684,143,847,169"/>
+<area shape="rect" id="node11" href="$freertos_8c.html#ad79ce8af311c18d3a05153a831c5e124" title="Function implementing the MagTask thread." alt="" coords="495,155,605,181"/>
+</map>

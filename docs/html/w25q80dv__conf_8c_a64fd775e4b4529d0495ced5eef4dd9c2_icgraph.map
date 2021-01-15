@@ -1,0 +1,8 @@
+<map id="LIS3MDL_Rx_DMA_WaitToFinish" name="LIS3MDL_Rx_DMA_WaitToFinish">
+<area shape="rect" id="node1" title="Waits for last SPI receive operation to be completed." alt="" coords="839,5,1067,32"/>
+<area shape="rect" id="node2" href="$lis3mdl_8h.html#a56dcc341e6a7d8744d3ade0572c5635f" title="Read magnetometer data values." alt="" coords="628,5,791,32"/>
+<area shape="rect" id="node3" href="$freertos_8c.html#ad79ce8af311c18d3a05153a831c5e124" title="Function implementing the MagTask thread." alt="" coords="469,5,580,32"/>
+<area shape="rect" id="node4" href="$freertos_8c.html#a6fe609e7033e6786a78a4a23a062b31e" title="Function implementing the UARTTask thread." alt="" coords="303,5,421,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#abade755e13d07c10889ae83143656158" title="FreeRTOS initialization." alt="" coords="108,5,255,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,60,32"/>
+</map>

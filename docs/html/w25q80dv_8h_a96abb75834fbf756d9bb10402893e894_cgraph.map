@@ -1,0 +1,10 @@
+<map id="W25Q80DV_WriteSector" name="W25Q80DV_WriteSector">
+<area shape="rect" id="node1" title="Writes a complete sector starting in init_pos (24 bits)" alt="" coords="5,115,184,141"/>
+<area shape="rect" id="node2" href="$lis3mdl__conf_8c.html#ad3ea125cdd6250300d1c332652e139de" title="ON/OFF magnetometer chip select pin." alt="" coords="503,64,675,91"/>
+<area shape="rect" id="node3" href="$lis3mdl__conf_8c.html#a1de4e79d0a9e295a52e76450b519f39f" title="Delay in milliseconds." alt="" coords="519,13,660,40"/>
+<area shape="rect" id="node4" href="$lis3mdl__conf_8c.html#a7775015cb4c759eabbbddfe8f903acc9" title="Transmits a number of bytes." alt="" coords="530,165,649,192"/>
+<area shape="rect" id="node5" href="$lis3mdl__conf_8c.html#a2e17264c13c944d054066b6a8a7b26ca" title="Transmits a number of bytes using DMA." alt="" coords="511,115,668,141"/>
+<area shape="rect" id="node6" href="$lis3mdl__conf_8c.html#af02b29325dc32e5e998b2fb8a1be3d01" title="Waits for last SPI transmit operation to be completed." alt="" coords="467,216,712,243"/>
+<area shape="rect" id="node7" href="$w25q80dv_8c.html#a070fb2732e86a991500214598dd9eec2" title="Disables write operation." alt="" coords="232,64,419,91"/>
+<area shape="rect" id="node8" href="$w25q80dv_8c.html#aebe65a81df64256ef57af86f0421ded9" title="Enables write operation." alt="" coords="234,115,417,141"/>
+</map>

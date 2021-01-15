@@ -1,0 +1,187 @@
+\hypertarget{extflash__memory_8h}{}\doxysection{stm32/\+Core/\+Inc/extflash\+\_\+memory.h File Reference}
+\label{extflash__memory_8h}\index{stm32/Core/Inc/extflash\_memory.h@{stm32/Core/Inc/extflash\_memory.h}}
+
+
+This file provides code for specific F\+L\+A\+SH application.  
+
+
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}} \{ \mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06da6645c1a6d63b56d54ea0c49d5a7a3c07}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+E\+R\+R\+OR}} = -\/1, 
+\mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06da41498d7b4a81a05a2f4ae7910f0c7329}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+OK}} = 0
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{extflash__memory_8h_ab480ef650cb206b243928597a50754e2}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Check\+ID}} (uint32\+\_\+t id\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Checks the ID is present on F\+L\+A\+SH memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{extflash__memory_8h_a738991c510a5ee657d01d0c2a82d3599}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Read\+Data}} (uint32\+\_\+t id\+\_\+value, int16\+\_\+t $\ast$x\+\_\+mag, int16\+\_\+t $\ast$y\+\_\+mag, int16\+\_\+t $\ast$z\+\_\+mag, int16\+\_\+t $\ast$temp)
+\begin{DoxyCompactList}\small\item\em Reads data from external F\+L\+A\+SH memory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{extflash__memory_8h_a7b15ba76cf7cf4bda2bf3c68a91febfd}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Write\+Data}} (uint32\+\_\+t id\+\_\+value, int16\+\_\+t x\+\_\+mag, int16\+\_\+t y\+\_\+mag, int16\+\_\+t z\+\_\+mag, int16\+\_\+t temp)
+\begin{DoxyCompactList}\small\item\em Writes data to external F\+L\+A\+SH memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for specific F\+L\+A\+SH application. 
+
+\begin{DoxyAuthor}{Author}
+fdominguez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/13/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}\label{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}} 
+\index{extflash\_memory.h@{extflash\_memory.h}!EXTFLASH\_StatusTypeDef@{EXTFLASH\_StatusTypeDef}}
+\index{EXTFLASH\_StatusTypeDef@{EXTFLASH\_StatusTypeDef}!extflash\_memory.h@{extflash\_memory.h}}
+\doxysubsubsection{\texorpdfstring{EXTFLASH\_StatusTypeDef}{EXTFLASH\_StatusTypeDef}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTFLASH\_ERROR@{EXTFLASH\_ERROR}!extflash\_memory.h@{extflash\_memory.h}}\index{extflash\_memory.h@{extflash\_memory.h}!EXTFLASH\_ERROR@{EXTFLASH\_ERROR}}}\mbox{\Hypertarget{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06da6645c1a6d63b56d54ea0c49d5a7a3c07}\label{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06da6645c1a6d63b56d54ea0c49d5a7a3c07}} 
+E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTFLASH\_OK@{EXTFLASH\_OK}!extflash\_memory.h@{extflash\_memory.h}}\index{extflash\_memory.h@{extflash\_memory.h}!EXTFLASH\_OK@{EXTFLASH\_OK}}}\mbox{\Hypertarget{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06da41498d7b4a81a05a2f4ae7910f0c7329}\label{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06da41498d7b4a81a05a2f4ae7910f0c7329}} 
+E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+OK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 22 of file extflash\+\_\+memory.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{extflash__memory_8h_ab480ef650cb206b243928597a50754e2}\label{extflash__memory_8h_ab480ef650cb206b243928597a50754e2}} 
+\index{extflash\_memory.h@{extflash\_memory.h}!EXTFLASH\_CheckID@{EXTFLASH\_CheckID}}
+\index{EXTFLASH\_CheckID@{EXTFLASH\_CheckID}!extflash\_memory.h@{extflash\_memory.h}}
+\doxysubsubsection{\texorpdfstring{EXTFLASH\_CheckID()}{EXTFLASH\_CheckID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}} E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Check\+ID (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Checks the ID is present on F\+L\+A\+SH memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+value} & ID to look for in F\+L\+A\+SH memory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+L\+A\+SH Status 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file extflash\+\_\+memory.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extflash__memory_8h_ab480ef650cb206b243928597a50754e2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extflash__memory_8h_ab480ef650cb206b243928597a50754e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{extflash__memory_8h_a738991c510a5ee657d01d0c2a82d3599}\label{extflash__memory_8h_a738991c510a5ee657d01d0c2a82d3599}} 
+\index{extflash\_memory.h@{extflash\_memory.h}!EXTFLASH\_ReadData@{EXTFLASH\_ReadData}}
+\index{EXTFLASH\_ReadData@{EXTFLASH\_ReadData}!extflash\_memory.h@{extflash\_memory.h}}
+\doxysubsubsection{\texorpdfstring{EXTFLASH\_ReadData()}{EXTFLASH\_ReadData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}} E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Read\+Data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id\+\_\+value,  }\item[{int16\+\_\+t $\ast$}]{x\+\_\+mag,  }\item[{int16\+\_\+t $\ast$}]{y\+\_\+mag,  }\item[{int16\+\_\+t $\ast$}]{z\+\_\+mag,  }\item[{int16\+\_\+t $\ast$}]{temp }\end{DoxyParamCaption})}
+
+
+
+Reads data from external F\+L\+A\+SH memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+value} & ID to look for in F\+L\+A\+SH memory \\
+\hline
+{\em x\+\_\+mag} & magnetometer X value read \\
+\hline
+{\em y\+\_\+mag} & magnetometer Y value read \\
+\hline
+{\em z\+\_\+mag} & magnetometer Z value read \\
+\hline
+{\em temp} & temperature value read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+T\+F\+L\+A\+SH Status 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file extflash\+\_\+memory.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extflash__memory_8h_a738991c510a5ee657d01d0c2a82d3599_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extflash__memory_8h_a738991c510a5ee657d01d0c2a82d3599_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{extflash__memory_8h_a7b15ba76cf7cf4bda2bf3c68a91febfd}\label{extflash__memory_8h_a7b15ba76cf7cf4bda2bf3c68a91febfd}} 
+\index{extflash\_memory.h@{extflash\_memory.h}!EXTFLASH\_WriteData@{EXTFLASH\_WriteData}}
+\index{EXTFLASH\_WriteData@{EXTFLASH\_WriteData}!extflash\_memory.h@{extflash\_memory.h}}
+\doxysubsubsection{\texorpdfstring{EXTFLASH\_WriteData()}{EXTFLASH\_WriteData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{extflash__memory_8h_a035aa4a5f7ea23f096ef1d07a45ef06d}{E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Status\+Type\+Def}} E\+X\+T\+F\+L\+A\+S\+H\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id\+\_\+value,  }\item[{int16\+\_\+t}]{x\+\_\+mag,  }\item[{int16\+\_\+t}]{y\+\_\+mag,  }\item[{int16\+\_\+t}]{z\+\_\+mag,  }\item[{int16\+\_\+t}]{temp }\end{DoxyParamCaption})}
+
+
+
+Writes data to external F\+L\+A\+SH memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+\_\+value} & ID to look for in F\+L\+A\+SH memory \\
+\hline
+{\em x\+\_\+mag} & magnetometer X value to write \\
+\hline
+{\em y\+\_\+mag} & magnetometer Y value to write \\
+\hline
+{\em z\+\_\+mag} & magnetometer Z value to write \\
+\hline
+{\em temp} & temperature value to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+X\+T\+F\+L\+A\+SH Status 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file extflash\+\_\+memory.\+c.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extflash__memory_8h_a7b15ba76cf7cf4bda2bf3c68a91febfd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{extflash__memory_8h_a7b15ba76cf7cf4bda2bf3c68a91febfd_icgraph}
+\end{center}
+\end{figure}

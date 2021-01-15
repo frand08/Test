@@ -1,0 +1,411 @@
+\hypertarget{lis3mdl__conf_8c}{}\doxysection{stm32/\+Drivers/\+L\+I\+S3\+M\+D\+L/\+Src/lis3mdl\+\_\+conf.c File Reference}
+\label{lis3mdl__conf_8c}\index{stm32/Drivers/LIS3MDL/Src/lis3mdl\_conf.c@{stm32/Drivers/LIS3MDL/Src/lis3mdl\_conf.c}}
+
+
+User configuration for L\+I\+S3\+M\+DL module driver.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lis3mdl__conf_8c_ad3ea125cdd6250300d1c332652e139de}{W25\+Q80\+D\+V\+\_\+\+Chip\+Select}} (uint32\+\_\+t on\+\_\+off)
+\begin{DoxyCompactList}\small\item\em O\+N/\+O\+FF magnetometer chip select pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lis3mdl__conf_8c_a1de4e79d0a9e295a52e76450b519f39f}{W25\+Q80\+D\+V\+\_\+\+Delay}} (uint32\+\_\+t ms)
+\begin{DoxyCompactList}\small\item\em Delay in milliseconds. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_ae600f0fbfbfc47987b798a3c9bd4f948}{W25\+Q80\+D\+V\+\_\+\+Tx\+Rx}} (uint8\+\_\+t $\ast$tx\+\_\+data, uint8\+\_\+t $\ast$rx\+\_\+data, uint16\+\_\+t size, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Transmit and then receives a number of bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_a7775015cb4c759eabbbddfe8f903acc9}{W25\+Q80\+D\+V\+\_\+\+Tx}} (uint8\+\_\+t $\ast$tx\+\_\+data, uint16\+\_\+t size, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Transmits a number of bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_a205be3fab0ea8da0d83a78c815559a6e}{W25\+Q80\+D\+V\+\_\+\+Rx}} (uint8\+\_\+t $\ast$rx\+\_\+data, uint16\+\_\+t size, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Receives a number of bytes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_a332c053967b6e0f67a33fe39e91fce2b}{W25\+Q80\+D\+V\+\_\+\+Tx\+Rx\+\_\+\+D\+MA}} (uint8\+\_\+t $\ast$tx\+\_\+data, uint8\+\_\+t $\ast$rx\+\_\+data, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Transmit and then receives a number of bytes using D\+MA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_a2e17264c13c944d054066b6a8a7b26ca}{W25\+Q80\+D\+V\+\_\+\+Tx\+\_\+\+D\+MA}} (uint8\+\_\+t $\ast$tx\+\_\+data, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Transmits a number of bytes using D\+MA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_a6c2d71a422266a8c2dbc93b0cefc6805}{W25\+Q80\+D\+V\+\_\+\+Rx\+\_\+\+D\+MA}} (uint8\+\_\+t $\ast$rx\+\_\+data, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Receives a number of bytes using D\+MA. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_af02b29325dc32e5e998b2fb8a1be3d01}{W25\+Q80\+D\+V\+\_\+\+Tx\+\_\+\+D\+M\+A\+\_\+\+Wait\+To\+Finish}} (uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Waits for last S\+PI transmit operation to be completed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{lis3mdl__conf_8c_a83d14ac29c1ddd3f0aef622282f7a32a}{W25\+Q80\+D\+V\+\_\+\+Rx\+\_\+\+D\+M\+A\+\_\+\+Wait\+To\+Finish}} (uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Waits for last S\+PI receive operation to be completed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+S\+P\+I\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{lis3mdl__conf_8c_a9c6222bae4d0328dd843ae099623b40b}{hspi1}}
+\item 
+os\+Message\+Q\+Id \mbox{\hyperlink{lis3mdl__conf_8c_a8c37aca57d037596b651eb312178a9d9}{S\+P\+I\+Tx\+Queue\+Handle}}
+\item 
+os\+Message\+Q\+Id \mbox{\hyperlink{lis3mdl__conf_8c_a5ee0f2482bbc2a2b4776be1815a21340}{S\+P\+I\+Rx\+Queue\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User configuration for L\+I\+S3\+M\+DL module driver. 
+
+\begin{DoxyAuthor}{Author}
+fdominguez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+01/13/2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lis3mdl__conf_8c_ad3ea125cdd6250300d1c332652e139de}\label{lis3mdl__conf_8c_ad3ea125cdd6250300d1c332652e139de}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_ChipSelect@{W25Q80DV\_ChipSelect}}
+\index{W25Q80DV\_ChipSelect@{W25Q80DV\_ChipSelect}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_ChipSelect()}{W25Q80DV\_ChipSelect()}}
+{\footnotesize\ttfamily void W25\+Q80\+D\+V\+\_\+\+Chip\+Select (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{on\+\_\+off }\end{DoxyParamCaption})}
+
+
+
+O\+N/\+O\+FF magnetometer chip select pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+\_\+off} & pin state selected \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_ad3ea125cdd6250300d1c332652e139de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a1de4e79d0a9e295a52e76450b519f39f}\label{lis3mdl__conf_8c_a1de4e79d0a9e295a52e76450b519f39f}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_Delay@{W25Q80DV\_Delay}}
+\index{W25Q80DV\_Delay@{W25Q80DV\_Delay}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Delay()}{W25Q80DV\_Delay()}}
+{\footnotesize\ttfamily void W25\+Q80\+D\+V\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{ms }\end{DoxyParamCaption})}
+
+
+
+Delay in milliseconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & milliseconds to delay (should be a non-\/blocking function) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_a1de4e79d0a9e295a52e76450b519f39f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a205be3fab0ea8da0d83a78c815559a6e}\label{lis3mdl__conf_8c_a205be3fab0ea8da0d83a78c815559a6e}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_Rx@{W25Q80DV\_Rx}}
+\index{W25Q80DV\_Rx@{W25Q80DV\_Rx}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Rx()}{W25Q80DV\_Rx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Rx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+data,  }\item[{uint16\+\_\+t}]{size,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Receives a number of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rx\+\_\+data} & Vector where the data read is stored \\
+\hline
+{\em size} & Number of bytes to receive \\
+\hline
+{\em Timeout} & Timeout duration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 79 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_a205be3fab0ea8da0d83a78c815559a6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a6c2d71a422266a8c2dbc93b0cefc6805}\label{lis3mdl__conf_8c_a6c2d71a422266a8c2dbc93b0cefc6805}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_Rx\_DMA@{W25Q80DV\_Rx\_DMA}}
+\index{W25Q80DV\_Rx\_DMA@{W25Q80DV\_Rx\_DMA}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Rx\_DMA()}{W25Q80DV\_Rx\_DMA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Rx\+\_\+\+D\+MA (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Receives a number of bytes using D\+MA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rx\+\_\+data} & Vector where the data read is stored \\
+\hline
+{\em size} & Number of bytes to receive \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 127 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_a6c2d71a422266a8c2dbc93b0cefc6805_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a83d14ac29c1ddd3f0aef622282f7a32a}\label{lis3mdl__conf_8c_a83d14ac29c1ddd3f0aef622282f7a32a}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_Rx\_DMA\_WaitToFinish@{W25Q80DV\_Rx\_DMA\_WaitToFinish}}
+\index{W25Q80DV\_Rx\_DMA\_WaitToFinish@{W25Q80DV\_Rx\_DMA\_WaitToFinish}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Rx\_DMA\_WaitToFinish()}{W25Q80DV\_Rx\_DMA\_WaitToFinish()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Rx\+\_\+\+D\+M\+A\+\_\+\+Wait\+To\+Finish (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Waits for last S\+PI receive operation to be completed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timeout} & Timeout duration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 159 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_a83d14ac29c1ddd3f0aef622282f7a32a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a7775015cb4c759eabbbddfe8f903acc9}\label{lis3mdl__conf_8c_a7775015cb4c759eabbbddfe8f903acc9}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_Tx@{W25Q80DV\_Tx}}
+\index{W25Q80DV\_Tx@{W25Q80DV\_Tx}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Tx()}{W25Q80DV\_Tx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Tx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+data,  }\item[{uint16\+\_\+t}]{size,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Transmits a number of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+data} & Vector to transmit \\
+\hline
+{\em size} & Number of bytes to transmit \\
+\hline
+{\em Timeout} & Timeout duration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 62 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_a7775015cb4c759eabbbddfe8f903acc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a2e17264c13c944d054066b6a8a7b26ca}\label{lis3mdl__conf_8c_a2e17264c13c944d054066b6a8a7b26ca}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_Tx\_DMA@{W25Q80DV\_Tx\_DMA}}
+\index{W25Q80DV\_Tx\_DMA@{W25Q80DV\_Tx\_DMA}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Tx\_DMA()}{W25Q80DV\_Tx\_DMA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Tx\+\_\+\+D\+MA (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Transmits a number of bytes using D\+MA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+data} & Vector to transmit \\
+\hline
+{\em size} & Number of bytes to transmit \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 111 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_a2e17264c13c944d054066b6a8a7b26ca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_af02b29325dc32e5e998b2fb8a1be3d01}\label{lis3mdl__conf_8c_af02b29325dc32e5e998b2fb8a1be3d01}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_Tx\_DMA\_WaitToFinish@{W25Q80DV\_Tx\_DMA\_WaitToFinish}}
+\index{W25Q80DV\_Tx\_DMA\_WaitToFinish@{W25Q80DV\_Tx\_DMA\_WaitToFinish}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_Tx\_DMA\_WaitToFinish()}{W25Q80DV\_Tx\_DMA\_WaitToFinish()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Tx\+\_\+\+D\+M\+A\+\_\+\+Wait\+To\+Finish (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Waits for last S\+PI transmit operation to be completed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Timeout} & Timeout duration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 142 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_af02b29325dc32e5e998b2fb8a1be3d01_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_ae600f0fbfbfc47987b798a3c9bd4f948}\label{lis3mdl__conf_8c_ae600f0fbfbfc47987b798a3c9bd4f948}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_TxRx@{W25Q80DV\_TxRx}}
+\index{W25Q80DV\_TxRx@{W25Q80DV\_TxRx}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_TxRx()}{W25Q80DV\_TxRx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Tx\+Rx (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+data,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+data,  }\item[{uint16\+\_\+t}]{size,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Transmit and then receives a number of bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+data} & Vector to transmit \\
+\hline
+{\em rx\+\_\+data} & Vector where the data read is stored \\
+\hline
+{\em size} & Number of bytes to transmit/receive \\
+\hline
+{\em Timeout} & Timeout duration \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 45 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_ae600f0fbfbfc47987b798a3c9bd4f948_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a332c053967b6e0f67a33fe39e91fce2b}\label{lis3mdl__conf_8c_a332c053967b6e0f67a33fe39e91fce2b}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!W25Q80DV\_TxRx\_DMA@{W25Q80DV\_TxRx\_DMA}}
+\index{W25Q80DV\_TxRx\_DMA@{W25Q80DV\_TxRx\_DMA}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{W25Q80DV\_TxRx\_DMA()}{W25Q80DV\_TxRx\_DMA()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{w25q80dv_8h_a56c73ecb229601dd72712749a46d9dd3}{W25\+Q80\+D\+V\+\_\+\+Status\+Type\+Def}} W25\+Q80\+D\+V\+\_\+\+Tx\+Rx\+\_\+\+D\+MA (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{tx\+\_\+data,  }\item[{uint8\+\_\+t $\ast$}]{rx\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Transmit and then receives a number of bytes using D\+MA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+data} & Vector to transmit \\
+\hline
+{\em rx\+\_\+data} & Vector where the data read is stored \\
+\hline
+{\em size} & Number of bytes to transmit/receive \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em W25\+Q80\+DV} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 95 of file lis3mdl\+\_\+conf.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lis3mdl__conf_8c_a332c053967b6e0f67a33fe39e91fce2b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{lis3mdl__conf_8c_a9c6222bae4d0328dd843ae099623b40b}\label{lis3mdl__conf_8c_a9c6222bae4d0328dd843ae099623b40b}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!hspi1@{hspi1}}
+\index{hspi1@{hspi1}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{hspi1}{hspi1}}
+{\footnotesize\ttfamily S\+P\+I\+\_\+\+Handle\+Type\+Def hspi1}
+
+
+
+Definition at line 27 of file spi.\+c.
+
+\mbox{\Hypertarget{lis3mdl__conf_8c_a5ee0f2482bbc2a2b4776be1815a21340}\label{lis3mdl__conf_8c_a5ee0f2482bbc2a2b4776be1815a21340}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!SPIRxQueueHandle@{SPIRxQueueHandle}}
+\index{SPIRxQueueHandle@{SPIRxQueueHandle}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{SPIRxQueueHandle}{SPIRxQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Q\+Id S\+P\+I\+Rx\+Queue\+Handle}
+
+
+
+Definition at line 65 of file freertos.\+c.
+
+\mbox{\Hypertarget{lis3mdl__conf_8c_a8c37aca57d037596b651eb312178a9d9}\label{lis3mdl__conf_8c_a8c37aca57d037596b651eb312178a9d9}} 
+\index{lis3mdl\_conf.c@{lis3mdl\_conf.c}!SPITxQueueHandle@{SPITxQueueHandle}}
+\index{SPITxQueueHandle@{SPITxQueueHandle}!lis3mdl\_conf.c@{lis3mdl\_conf.c}}
+\doxysubsubsection{\texorpdfstring{SPITxQueueHandle}{SPITxQueueHandle}}
+{\footnotesize\ttfamily os\+Message\+Q\+Id S\+P\+I\+Tx\+Queue\+Handle}
+
+
+
+Definition at line 64 of file freertos.\+c.
+
